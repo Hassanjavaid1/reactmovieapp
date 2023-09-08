@@ -1,0 +1,80 @@
+#FilterMoviesItems {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+}
+#filter_custom_title {
+  font-size: 1.8rem;
+  margin-left: 10px;
+  font-family: sans-serif;
+}
+#Filter_movie_image {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+#Filter_movie_image:hover {
+  filter: brightness(0.6);
+  height: 295px;
+  z-index: 999;
+  box-shadow: 3px 3px 3px rgb(46, 37, 37);
+  cursor: pointer;
+}
+#filter_title {
+  border-left: 3px solid var(--purple);
+  padding-left: 30px;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+#filter_movie_rating {
+  font-family: math;
+  text-align: center;
+  float: right;
+  font-weight: bold;
+  margin-top: 0.7rem;
+}
+#filter_movie_date_rating {
+  display: flex;
+  gap: 5rem;
+  font-family: math;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#filter_movie_release_date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 2px solid black;
+  width: 41px;
+  font-weight: bold;
+  color: white;
+  background: #142019;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  font-family: math;
+  margin-top: 0.7rem;
+  margin-left: 0.7em;
+  align-items: center;
+}
+#genre_title_name {
+  font-size: 30px;
+  margin-left: 3.4rem;
+  margin-bottom: -5.6rem;
+  font-weight: bold;
+  font-family: math;
+  color: #f1edf2;
+}
+
+a {
+  text-decoration: none;
+  color: #ebcd20;
+}

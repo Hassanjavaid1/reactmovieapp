@@ -1,0 +1,169 @@
+@media (max-width: 912px) {
+  #Searchcards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #search_movie_image {
+    height: 37rem;
+  }
+  #search_movie_image:hover {
+    height: 37rem;
+    filter: brightness(0.5);
+  }
+  #search_title {
+    font-size: 5.3rem;
+    margin-left: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  #search_movie_name {
+    font-size: 3rem;
+
+    margin-left: -1.6rem;
+  }
+  #movie_rating_search {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+  #movie_release_date_search {
+    font-size: 3rem;
+    width: auto;
+  }
+
+  #search_date_rating_search {
+    gap: 8rem;
+  }
+}
+@media (max-width: 768px) {
+  #Searchcards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #search_movie_image {
+    height: 53.8rem;
+  }
+  #search_movie_image:hover {
+    height: 53.8rem;
+    filter: brightness(0.5);
+  }
+  #Searchcards {
+    gap: 1.9rem;
+  }
+  #search_title {
+    font-size: 5.3rem;
+
+    margin-bottom: 3rem;
+
+    margin-top: 6rem;
+  }
+  #search_date_rating {
+    gap: 18rem;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #Searchcards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #search_movie_image {
+    height: 60rem;
+  }
+  #search_movie_image:hover {
+    height: 60.1rem;
+    filter: brightness(0.5);
+  }
+  #Searchcards {
+    gap: 1.9rem;
+  }
+  #search_title {
+    font-size: 5.3rem;
+
+    margin-bottom: 3rem;
+
+    margin-top: 6rem;
+  }
+  #search_date_rating {
+    gap: 18rem;
+    margin-top: 3rem;
+  }
+  h4 {
+    font-size: 3.5rem !important;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  h3 {
+    opacity: 0.8;
+  }
+  #movie_rating {
+    margin-top: 1rem;
+    font-size: 3.5rem !important;
+  }
+  #movie_release_date {
+    font-size: 3.5rem !important;
+  }
+  .Searchloader {
+    width: 10rem;
+    height: 10rem;
+    border: 0.55rem solid #5e5e3e;
+    border-top: 0.55rem solid #ffffff;
+  }
+  #no_result_found_search {
+    text-align: center;
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .Searchloader {
+    width: 10rem;
+    height: 10rem;
+    border: 0.55rem solid #5e5e3e;
+    border-top: 0.55rem solid #ffffff;
+  }
+  .Searchloader {
+    width: 10rem;
+    height: 10rem;
+    border: 0.55rem solid #5e5e3e;
+    border-top: 0.55rem solid #ffffff;
+  }
+  #no_result_found_search {
+    text-align: center;
+    font-size: 4.2rem;
+  }
+}
+@media (max-width: 360px) {
+  #search_movie_image {
+    height: 67rem;
+  }
+  #search_movie_image:hover {
+    height: 67rem;
+    filter: brightness(0.5);
+  }
+  .Searchloader {
+    width: 10rem;
+    height: 10rem;
+    border: 0.55rem solid #5e5e3e;
+    border-top: 0.55rem solid #ffffff;
+  }
+  #no_result_found_search {
+    text-align: center;
+    font-size: 4rem;
+  }
+}
+@media (max-width: 280px) {
+  #search_movie_image {
+    height: 74rem !important;
+  }
+  #search_movie_image:hover {
+    height: 74rem !important;
+    filter: brightness(0.5);
+  }
+  .Searchloader {
+    width: 10rem;
+    height: 10rem;
+    border: 0.55rem solid #5e5e3e;
+    border-top: 0.55rem solid #ffffff;
+  }
+  #no_result_found_search {
+    text-align: center;
+    font-size: 4rem;
+  }
+}

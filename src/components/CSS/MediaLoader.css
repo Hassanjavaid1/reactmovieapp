@@ -1,0 +1,24 @@
+@media (max-width: 1000px) {
+  #loader {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 540px) {
+  #loader {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+@media (max-width: 412px) {
+  #loader {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+@media (max-width: 390px) {
+  #loader {
+    width: 35rem;
+    height: 35rem;
+  }
+}

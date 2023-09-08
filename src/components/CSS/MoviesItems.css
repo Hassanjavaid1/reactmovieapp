@@ -1,0 +1,81 @@
+#MoviesItems {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1.8rem;
+}
+#MoviesItems::-webkit-scrollbar {
+  background-color: #312828;
+  height: 0.5rem;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+#MoviesItems::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #524242;
+  opacity: 0;
+  transition: 0.5s;
+}
+#MoviesItems::-webkit-scrollbar-thumb:hover {
+  transition: 0.5s;
+  display: block;
+}
+h3 {
+  font-size: 1.8rem;
+  margin-left: 1rem;
+  font-family: sans-serif;
+}
+#movie_image {
+  height: 18.7rem;
+  object-fit: cover;
+  object-position: 50% 20%;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+#movie_image:hover {
+  filter: brightness(0.4);
+}
+h4 {
+  border-left: 0.18rem solid var(--purple);
+  margin: auto;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  text-align: center;
+}
+#movie_rating {
+  font-family: math;
+  text-align: center;
+  float: right;
+  font-weight: bold;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+#movie_date_rating {
+  display: flex;
+  gap: 5rem;
+  font-family: math;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#movie_release_date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 0.12rem solid black;
+  width: 2.56rem;
+  font-weight: bold;
+  color: white;
+  background: #142019;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border-top-left-radius: 0rem;
+  font-family: math;
+  margin-top: 0.7rem;
+  margin-left: 0.7em;
+  align-items: center;
+}

@@ -1,0 +1,666 @@
+@media (max-width: 1000px) {
+  :root {
+    font-size: 80%;
+  }
+  .banner_fadeBottom {
+    height: 21rem;
+  }
+}
+
+@media (max-width: 912px) {
+  :root {
+    font-size: 70%;
+  }
+}
+@media (max-width: 820px) {
+  :root {
+    font-size: 65%;
+  }
+  .overview_detail {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 540px) {
+  :root {
+    font-size: 50%;
+  }
+
+  .background_image {
+    overflow: hidden;
+  }
+  figure {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+  .movie_image_detail {
+    height: 65rem;
+    margin-top: 5rem;
+    margin-left: 0rem;
+  }
+  .movie_detail {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .overview_detail {
+    margin: auto;
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .videoBtn {
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .heading {
+    margin-top: 5rem;
+    font-size: 4.4rem;
+    line-height: 1;
+    width: 44rem;
+  }
+  .movierating {
+    font-size: 2.7rem;
+  }
+  .movie_length {
+    font-size: 2.7rem;
+  }
+  .movie_releasedate_detail {
+    font-size: 2.7rem;
+  }
+  .spancontent {
+    line-height: 3;
+  }
+  #overview_title {
+    font-size: 3.56rem;
+    line-height: 2;
+  }
+  #watchtralir {
+    font-size: 3.45rem;
+    margin-left: 1rem;
+  }
+  .play-btn {
+    width: 9.93rem;
+    height: 9.93rem;
+  }
+  #word {
+    font-size: 1.82rem;
+  }
+  #Director_span {
+    font-size: 2.33rem;
+  }
+  .Director {
+    margin-top: 4rem;
+  }
+  #cast_img {
+    height: 26rem;
+    width: 24rem;
+  }
+  #cast_img:hover {
+    height: 26rem;
+    width: 24rem;
+    filter: brightness(0.5);
+  }
+  #castdetail {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding: 1.8rem;
+  }
+  #cast_title {
+    font-size: 4rem;
+    font-family: math;
+    margin-bottom: 4rem;
+  }
+  #cast_name {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  #acting_name {
+    font-size: 1.93rem;
+  }
+  #movie_related_title {
+    font-size: 4.62rem;
+    font-family: math;
+    text-align: center;
+    padding: 3rem;
+  }
+  .video-related-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .custom-video-player {
+    height: 36.6rem;
+    width: 93%;
+  }
+  #video_name {
+    font-size: 4.12rem;
+    text-align: center;
+    font-family: math;
+    opacity: 0.8;
+    padding: 3rem;
+  }
+  .movie_img_reco {
+    height: 48rem;
+    border-radius: 1rem;
+  }
+  .movie_img_reco:hover {
+    height: 48rem;
+    border-radius: 1rem;
+    filter: brightness(0.5);
+  }
+  .reco_title {
+    font-size: 2.7rem;
+  }
+  .reco_rating {
+    font-size: 3rem;
+  }
+  .reco_release_date {
+    font-size: 3rem;
+    margin: auto;
+  }
+  iframe {
+    height: 56%;
+    width: 91%;
+  }
+  .exit_button {
+    top: 10.25rem;
+    right: 5.25rem;
+    font-size: 8.5rem;
+    color: white;
+    background: #141414;
+  }
+  #castdetail::-webkit-scrollbar {
+    background-color: transparent;
+    transition: 1s;
+  }
+  #castdetail::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 412px) {
+  :root {
+    font-size: 50%;
+  }
+
+  .background_image {
+    overflow: hidden;
+  }
+  figure {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+  .movie_image_detail {
+    height: 65rem;
+    margin-top: 5rem;
+    margin-left: 0rem;
+  }
+  .movie_detail {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .overview_detail {
+    margin: auto;
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .videoBtn {
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .heading {
+    margin-top: 5rem;
+    font-size: 4.4rem;
+    line-height: 1;
+    width: 44rem;
+  }
+  .movierating {
+    font-size: 2.7rem;
+  }
+  .movie_length {
+    font-size: 2.7rem;
+  }
+  .movie_releasedate_detail {
+    font-size: 2.7rem;
+  }
+  .spancontent {
+    line-height: 3;
+  }
+  #overview_title {
+    font-size: 3.56rem;
+    line-height: 2;
+  }
+  #watchtralir {
+    font-size: 3.45rem;
+    margin-left: 1rem;
+  }
+  .play-btn {
+    width: 9.93rem;
+    height: 9.93rem;
+  }
+  #word {
+    font-size: 1.82rem;
+  }
+  #Director_span {
+    font-size: 2.33rem;
+  }
+  .Director {
+    margin-top: 4rem;
+  }
+  #cast_img {
+    height: 26rem;
+    width: 24rem;
+  }
+  #cast_img:hover {
+    height: 26rem;
+    width: 24rem;
+    filter: brightness(0.5);
+  }
+  #castdetail {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding: 1.8rem;
+  }
+  #cast_title {
+    font-size: 4rem;
+    font-family: math;
+    margin-bottom: 4rem;
+  }
+  #cast_name {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  #acting_name {
+    font-size: 1.93rem;
+  }
+  #movie_related_title {
+    font-size: 4.62rem;
+    font-family: math;
+    text-align: center;
+    padding: 3rem;
+  }
+  .video-related-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .custom-video-player {
+    height: 36.6rem;
+    width: 93%;
+  }
+  #video_name {
+    font-size: 4.12rem;
+    text-align: center;
+    font-family: math;
+    opacity: 0.8;
+    padding: 3rem;
+  }
+  .movie_img_reco {
+    height: 48rem;
+    border-radius: 1rem;
+  }
+  .movie_img_reco:hover {
+    height: 48rem;
+    border-radius: 1rem;
+    filter: brightness(0.5);
+  }
+  .reco_title {
+    font-size: 2.7rem;
+  }
+  .reco_rating {
+    font-size: 3rem;
+  }
+  .reco_release_date {
+    font-size: 3rem;
+    margin: auto;
+  }
+  iframe {
+    height: 56%;
+    width: 91%;
+  }
+  .exit_button {
+    top: 10.25rem;
+    right: 5.25rem;
+    font-size: 8.5rem;
+
+    color: white;
+    background: #141414;
+  }
+  #castdetail::-webkit-scrollbar {
+    background-color: transparent;
+    transition: 1s;
+  }
+  #castdetail::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 393px) {
+  :root {
+    font-size: 45%;
+  }
+
+  .background_image {
+    overflow: hidden;
+  }
+  figure {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+  .movie_image_detail {
+    height: 65rem;
+    margin-top: 5rem;
+    margin-left: 0rem;
+  }
+  .movie_detail {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .overview_detail {
+    margin: auto;
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .videoBtn {
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .heading {
+    margin-top: 5rem;
+    font-size: 4.4rem;
+    line-height: 1;
+    width: 44rem;
+  }
+  .movierating {
+    font-size: 2.7rem;
+  }
+  .movie_length {
+    font-size: 2.7rem;
+  }
+  .movie_releasedate_detail {
+    font-size: 2.7rem;
+  }
+  .spancontent {
+    line-height: 3;
+  }
+  #overview_title {
+    font-size: 3.56rem;
+    line-height: 2;
+  }
+  #watchtralir {
+    font-size: 3.45rem;
+    margin-left: 1rem;
+  }
+  .play-btn {
+    width: 9.93rem;
+    height: 9.93rem;
+  }
+  #word {
+    font-size: 1.82rem;
+  }
+  #Director_span {
+    font-size: 2.33rem;
+  }
+  .Director {
+    margin-top: 4rem;
+  }
+  #cast_img {
+    height: 26rem;
+    width: 24rem;
+  }
+  #cast_img:hover {
+    height: 26rem;
+    width: 24rem;
+    filter: brightness(0.5);
+  }
+  #castdetail {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding: 1.8rem;
+  }
+  #cast_title {
+    font-size: 4rem;
+    font-family: math;
+    margin-bottom: 4rem;
+  }
+  #cast_name {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  #acting_name {
+    font-size: 1.93rem;
+  }
+  #movie_related_title {
+    font-size: 4.62rem;
+    font-family: math;
+    text-align: center;
+    padding: 3rem;
+  }
+  .video-related-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .custom-video-player {
+    height: 36.6rem;
+    width: 93%;
+  }
+  #video_name {
+    font-size: 4.12rem;
+    text-align: center;
+    font-family: math;
+    opacity: 0.8;
+    padding: 3rem;
+  }
+  .movie_img_reco {
+    height: 48rem;
+    border-radius: 1rem;
+  }
+  .movie_img_reco:hover {
+    height: 48rem;
+    border-radius: 1rem;
+    filter: brightness(0.5);
+  }
+  .reco_title {
+    font-size: 2.7rem;
+  }
+  .reco_rating {
+    font-size: 3rem;
+  }
+  .reco_release_date {
+    font-size: 3rem;
+    margin: auto;
+  }
+  iframe {
+    height: 56%;
+    width: 91%;
+  }
+  .exit_button {
+    top: 10.25rem;
+    right: 5.25rem;
+    font-size: 8.5rem;
+    color: white;
+    background: #141414;
+  }
+  #castdetail::-webkit-scrollbar {
+    background-color: transparent;
+    transition: 1s;
+  }
+  #castdetail::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 280px) {
+  :root {
+    font-size: 30%;
+  }
+  .background_image {
+    overflow: hidden;
+  }
+  figure {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin: auto;
+  }
+  .movie_image_detail {
+    height: 65rem;
+    margin-top: 5rem;
+    margin-left: 0rem;
+  }
+  .movie_detail {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .overview_detail {
+    margin: auto;
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .videoBtn {
+    justify-content: center;
+  }
+  .heading {
+    margin-top: 5rem;
+    font-size: 4.4rem;
+    line-height: 1;
+    width: 44rem;
+  }
+  .movierating {
+    font-size: 2.7rem;
+  }
+  .movie_length {
+    font-size: 2.7rem;
+  }
+  .movie_releasedate_detail {
+    font-size: 2.7rem;
+  }
+  .spancontent {
+    line-height: 3;
+  }
+  #overview_title {
+    font-size: 3.56rem;
+    line-height: 2;
+  }
+  #watchtralir {
+    font-size: 2.15rem;
+  }
+  #word {
+    font-size: 1.82rem;
+  }
+  #Director_span {
+    font-size: 2.33rem;
+  }
+  .Director {
+    margin-top: 4rem;
+  }
+  #cast_img {
+    height: 26rem;
+    width: 24rem;
+  }
+  #cast_img:hover {
+    height: 26rem;
+    width: 24rem;
+    filter: brightness(0.5);
+  }
+  #castdetail {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    padding: 1.8rem;
+  }
+  #cast_title {
+    font-size: 4rem;
+    font-family: math;
+    margin-bottom: 4rem;
+  }
+  #cast_name {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+  }
+  #acting_name {
+    font-size: 1.93rem;
+  }
+  #movie_related_title {
+    font-size: 4.62rem;
+    font-family: math;
+    text-align: center;
+    padding: 3rem;
+  }
+  .video-related-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column !important;
+  }
+  .custom-video-player {
+    height: 36.6rem;
+    width: 93%;
+  }
+  #video_name {
+    font-size: 4.12rem;
+    text-align: center;
+    font-family: math;
+    opacity: 0.8;
+    padding: 3rem;
+  }
+  .movie_img_reco {
+    height: 45rem;
+  }
+  .movie_img_reco:hover {
+    height: 45rem;
+    filter: brightness(0.5);
+  }
+  .reco_title {
+    font-size: 2.9rem;
+  }
+  .reco_rating {
+    font-size: 3.72rem;
+  }
+  .reco_release_date {
+    font-size: 3.72rem;
+    margin-top: 0rem;
+  }
+}

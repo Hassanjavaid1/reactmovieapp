@@ -1,0 +1,183 @@
+@media (max-width: 1000px) {
+  #navbar {
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+    height: 3rem;
+    gap: 0rem;
+    padding: 1rem;
+  }
+  li {
+    width: 2.5rem;
+    height: 0.4rem;
+    margin: 0.6rem;
+    transition: 0.4s;
+    background-color: #fff1f1;
+    list-style: none;
+  }
+}
+@media (max-width: 912px) {
+  form {
+    top: -2.4rem !important;
+  }
+  #iFlixlogo {
+    height: 3.6rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #navbar {
+    padding: 1.7rem !important;
+    height: 5rem !important;
+    margin-left: -1rem;
+  }
+  #iFlixlogo {
+    height: 5.3rem;
+  }
+  #iFlixName {
+    font-size: 5.5rem;
+  }
+  #searchContainer {
+    top: 6.9rem !important;
+  }
+  form {
+    height: 53px !important;
+  }
+  li {
+    width: 4rem;
+    height: 0.5rem;
+    margin: 1.1rem;
+  }
+  form:hover,
+  form:valid {
+    width: 34rem !important;
+  }
+}
+
+@media (max-width: 412px) {
+  #navbar {
+    padding: 2.1rem !important;
+  }
+  form {
+    top: -3.7rem !important;
+  }
+  input {
+    height: 40.5px;
+  }
+  #searchContainer {
+    right: 0.7rem !important;
+    top: 8.5rem !important;
+  }
+  form:hover,
+  form:valid {
+    width: 50rem !important;
+  }
+  .fa {
+    top: -0.1rem !important;
+  }
+}
+@media (max-width: 393px) {
+  #navbar {
+    padding: 2.1rem !important;
+  }
+  form {
+    top: -3.7rem !important;
+  }
+  input {
+    height: 40.5px;
+  }
+  #searchContainer {
+    right: 0.7rem !important;
+    top: 8.4rem !important;
+  }
+  form:hover,
+  form:valid {
+    width: 53rem !important;
+  }
+  .fa {
+    top: 0.2rem !important;
+  }
+
+  li {
+    width: 4.2rem;
+    height: 0.4rem;
+  }
+}
+@media (max-width: 360px) {
+  #navbar {
+    padding: 2.1rem !important;
+    height: 6.5rem !important;
+  }
+  form {
+    top: -3.7rem !important;
+  }
+  input {
+    height: 40.5px;
+  }
+  #searchContainer {
+    right: 1rem !important;
+    top: 9rem !important;
+  }
+  form:hover,
+  form:valid {
+    width: 62rem !important;
+  }
+  .fa {
+    top: 0.2rem !important;
+  }
+
+  li {
+    width: 4.2rem;
+    height: 0.4rem;
+  }
+  #iFlixName {
+    font-size: 5.9rem !important;
+  }
+  #iFlixlogo {
+    height: 5.9rem !important;
+  }
+  li {
+    width: 5rem !important;
+    height: 0.6rem !important;
+  }
+}
+
+@media (max-width: 280px) {
+  #navbar {
+    padding: 2.1rem !important;
+    height: 7.3rem !important;
+  }
+  form {
+    top: -3.7rem !important;
+  }
+  input {
+    height: 40.5px;
+  }
+  #searchContainer {
+    right: 1rem !important;
+    top: 9.5rem !important;
+  }
+  form:hover,
+  form:valid {
+    width: 56.2rem !important;
+  }
+  .fa {
+    top: 0.2rem !important;
+  }
+
+  li {
+    width: 5.6rem !important;
+    height: 0.7rem !important;
+    margin: 1.2rem !important;
+  }
+  #iFlixName {
+    font-size: 7rem !important;
+  }
+  #iFlixlogo {
+    height: 7rem !important;
+  }
+  li {
+    width: 5.2rem !important;
+    height: 0.7rem !important;
+  }
+}

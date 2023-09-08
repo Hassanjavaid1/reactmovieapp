@@ -1,0 +1,38 @@
+.Searchloader {
+  border: 0.25rem solid #5e5e3e;
+  border-radius: 50%;
+  border-top: 0.25rem solid #ffffff;
+  width: 1.87rem;
+  height: 1.87rem;
+  animation: spin 0.7s linear infinite;
+  margin: auto;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.filter_spinner {
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.infiniteScroller {
+  position: absolute;
+  left: 45%;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

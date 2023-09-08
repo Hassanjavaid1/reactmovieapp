@@ -1,0 +1,375 @@
+@media (max-width: 540px) {
+  :root {
+    font-size: 90%;
+  }
+  #background_poster {
+    height: 48.668rem;
+  }
+  #banner_detail {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.3rem;
+    margin-top: -2rem;
+  }
+  #banner_title {
+    font-size: 4.5rem;
+    max-width: 34rem;
+    width: 64rem;
+    text-align: left;
+  }
+  .DateRating {
+    font-size: 3.3rem;
+    line-height: 2;
+  }
+  .bannerOverview {
+    font-size: 2rem;
+    line-height: 1.2;
+    width: 40rem;
+  }
+
+  #btn {
+    font-size: 2rem;
+    padding: 0.6rem;
+  }
+  #buttonPlay {
+    width: 4.12rem;
+    height: 4.12rem;
+  }
+  .banner_fadeBottom {
+    height: 53.2rem !important;
+    background: linear-gradient(179deg, #57515100, rgb(0 0 0 / 61%), #120f0f);
+    top: 4rem;
+  }
+  .releaseDate {
+    height: 3.9rem;
+  }
+  h3 {
+    font-size: 4rem !important;
+  }
+  h4 {
+    font-size: 3rem !important;
+  }
+  #movie_image {
+    height: 46.7rem !important;
+    border-radius: 0.7rem !important;
+  }
+  #movie_image:hover {
+    height: 46.7rem !important;
+    border-radius: 0.7rem !important;
+    filter: brightness(0.5);
+  }
+  #movie_rating {
+    font-size: 3rem !important;
+  }
+  #movie_release_date {
+    font-size: 3rem !important;
+    width: auto !important;
+  }
+  #MoviesItems::-webkit-scrollbar {
+    background-color: transparent !important;
+  }
+  #MoviesItems::-webkit-scrollbar-thumb {
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 412px) {
+  #backdrop {
+    height: 80rem !important;
+  }
+  #background_poster {
+    background-position: center !important;
+    height: 81.668rem !important;
+  }
+  #banner_detail {
+    row-gap: 1.3rem;
+    margin-top: 1rem;
+  }
+  #banner_title {
+    font-size: 7rem;
+    max-width: 52rem;
+    width: 64rem;
+    text-align: center;
+    margin-left: -14rem;
+  }
+  .DateRating {
+    font-size: 3.6rem;
+    line-height: 2;
+  }
+  .bannerOverview {
+    font-size: 3rem;
+    line-height: 1.2;
+    width: 50rem;
+  }
+  #btn {
+    font-size: 4.4rem;
+    padding: 0.7rem;
+    width: 38rem;
+    border-radius: 1.4rem;
+  }
+  #buttonPlay {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .banner_fadeBottom {
+    height: 87rem !important;
+  }
+  #movie_image {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+  }
+  #movie_image:hover {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+    filter: brightness(0.5);
+  }
+  #MoviesItems {
+    gap: 1.6rem !important;
+  }
+  #movie_date_rating {
+    gap: 18rem !important;
+    margin-top: 2rem !important;
+  }
+  h4 {
+    font-size: 4rem !important;
+  }
+  #movie_rating {
+    font-size: 3.6rem !important;
+  }
+  #movie_release_date {
+    font-size: 3.6rem !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 393px) {
+  #backdrop {
+    height: 80rem !important;
+  }
+  #background_poster {
+    background-position: center !important;
+    height: 81.668rem !important;
+  }
+  #banner_detail {
+    row-gap: 1.3rem;
+    margin-top: 1rem;
+  }
+  #banner_title {
+    font-size: 7rem;
+    max-width: 52rem;
+    width: 64rem;
+    text-align: center;
+    margin-left: -14rem;
+  }
+  .DateRating {
+    font-size: 3.6rem;
+    line-height: 2;
+  }
+  .bannerOverview {
+    font-size: 3rem;
+    line-height: 1.2;
+    width: 50rem;
+  }
+  #btn {
+    font-size: 4.4rem;
+    padding: 0.7rem;
+    width: 38rem;
+    border-radius: 1.4rem;
+  }
+  #buttonPlay {
+    width: 9rem;
+    height: 9rem;
+  }
+  .banner_fadeBottom {
+    height: 87rem !important;
+    background: linear-gradient(179deg, #57515100, rgb(0 0 0 / 61%), #120f0f);
+    top: 4rem;
+  }
+
+  #movie_image {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+  }
+  #movie_image:hover {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+    filter: brightness(0.5);
+  }
+  #MoviesItems {
+    gap: 1.6rem !important;
+  }
+  #movie_date_rating {
+    gap: 18rem !important;
+    margin-top: 2rem !important;
+  }
+  h4 {
+    font-size: 4rem !important;
+  }
+  #movie_rating {
+    font-size: 3.6rem !important;
+  }
+  #movie_release_date {
+    font-size: 3.6rem !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #backdrop {
+    height: 80rem !important;
+  }
+  #background_poster {
+    background-position: center !important;
+    height: 81.668rem !important;
+  }
+  #banner_detail {
+    row-gap: 1.3rem;
+    margin-top: 1rem;
+  }
+  #banner_title {
+    font-size: 7rem;
+    max-width: 52rem;
+    width: 64rem;
+    text-align: center;
+    margin-left: -14rem;
+  }
+  .DateRating {
+    font-size: 3.6rem;
+    line-height: 2;
+    gap: 4rem;
+  }
+  #bannerRating {
+    font-size: 3.6rem;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+  }
+  .bannerOverview {
+    font-size: 3rem;
+    line-height: 1.2;
+    width: 50rem;
+  }
+  #btn {
+    font-size: 4.4rem;
+    padding: 0.7rem;
+    width: 38rem;
+    border-radius: 1.4rem;
+  }
+  #btn:hover {
+    font-size: 4.4rem;
+    padding: 0.7rem;
+    width: 38rem;
+    border-radius: 1.4rem;
+  }
+  #buttonPlay {
+    width: 9rem;
+    height: 9rem;
+  }
+  .banner_fadeBottom {
+    height: 88.1rem !important;
+    background: linear-gradient(179deg, #57515100, rgb(0 0 0 / 61%), #120f0f);
+    top: 4rem;
+  }
+
+  #movie_image {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+  }
+  #movie_image:hover {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+    filter: brightness(0.5);
+  }
+  #MoviesItems {
+    gap: 1.6rem !important;
+  }
+  #movie_date_rating {
+    gap: 18rem !important;
+    margin-top: 2rem !important;
+  }
+  h4 {
+    font-size: 4rem !important;
+  }
+  #movie_rating {
+    font-size: 3.6rem !important;
+  }
+  #movie_release_date {
+    font-size: 3.6rem !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 280px) {
+  #backdrop {
+    height: 80rem !important;
+  }
+  #background_poster {
+    background-position: center !important;
+    height: 81.668rem !important;
+  }
+  #banner_detail {
+    row-gap: 1.3rem;
+    margin-top: 1rem;
+  }
+  #banner_title {
+    font-size: 7rem;
+    max-width: 52rem;
+    width: 64rem;
+    text-align: center;
+    margin-left: -14rem;
+  }
+  .DateRating {
+    font-size: 3.6rem;
+    line-height: 2;
+  }
+  .bannerOverview {
+    font-size: 3rem;
+    line-height: 1.2;
+    width: 50rem;
+  }
+  #btn {
+    font-size: 4.4rem;
+    padding: 0.7rem;
+    width: 38rem;
+    border-radius: 1.4rem;
+  }
+  #buttonPlay {
+    width: 9rem;
+    height: 9rem;
+  }
+  .banner_fadeBottom {
+    height: 89rem !important;
+    background: linear-gradient(179deg, #57515100, rgb(0 0 0 / 61%), #120f0f);
+    top: 4rem;
+  }
+
+  #movie_image {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+  }
+  #movie_image:hover {
+    height: 62.4rem !important;
+    border-radius: 2rem !important;
+    filter: brightness(0.5);
+  }
+  #MoviesItems {
+    gap: 1.6rem !important;
+  }
+  #movie_date_rating {
+    gap: 18rem !important;
+    margin-top: 2rem !important;
+  }
+  h4 {
+    font-size: 4rem !important;
+  }
+  #movie_rating {
+    font-size: 3.6rem !important;
+  }
+  #movie_release_date {
+    font-size: 3.6rem !important;
+    width: auto !important;
+  }
+}

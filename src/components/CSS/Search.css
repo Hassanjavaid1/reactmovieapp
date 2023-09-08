@@ -1,0 +1,195 @@
+body::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  background-color: #424241;
+}
+body::-webkit-scrollbar-thumb {
+  scroll-behavior: smooth;
+  background-color: #9f9f8a;
+  border-radius: 1rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+#searchContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 39px;
+  z-index: 1100;
+}
+
+#SearchMovies {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+#Searchcards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  margin: auto;
+  gap: 5px;
+}
+
+form {
+  position: relative;
+  top: -28px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 19rem;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+  border: none;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+  background-color: #292626;
+}
+
+form:hover,
+form:valid {
+  width: 26rem;
+  cursor: pointer;
+}
+
+form:hover input,
+form:valid input {
+  display: block;
+}
+
+form:hover .fa,
+form:valid .fa {
+  background: #07051a;
+  color: white;
+}
+
+#search_date_rating {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+#search_movie_image {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  box-shadow: 1px 0px 5px 0px grey;
+  border: 2px solid rgb(150, 147, 147);
+}
+#search_movie_image:hover {
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  box-shadow: 1px 0px 5px 0px grey;
+  border: 2px solid rgb(150, 147, 147);
+  filter: brightness(0.5);
+  scale: 1.1;
+  overflow: hidden;
+}
+#search_title {
+  font-size: 1.6rem;
+  margin-left: 7rem;
+  font-family: math;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+#search_movie_name {
+  border-left: 3px solid var(--purple);
+  margin: auto;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+#no_more_result {
+  text-align: center;
+  opacity: 0.8;
+  font-size: 27px;
+  font-weight: bold;
+  font-family: cursive;
+  color: red;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#no_result_found_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  margin-top: 7rem;
+  font-family: math;
+  color: red;
+}
+
+#movie_rating_search {
+  font-family: math;
+  text-align: center;
+  float: right;
+  font-weight: bold;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+#movie_date_rating_search {
+  display: flex;
+  gap: 5rem;
+  font-family: math;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#movie_release_date_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 0.12rem solid black;
+  width: 2.56rem;
+  font-weight: bold;
+  color: white;
+  background: #142019;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border-top-left-radius: 0rem;
+  font-family: math;
+  margin-top: 0.7rem;
+  margin-left: 0.7em;
+  align-items: center;
+}

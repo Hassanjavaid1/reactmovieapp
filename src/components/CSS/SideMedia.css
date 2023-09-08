@@ -1,0 +1,175 @@
+@media (max-width: 912px) {
+  #genres {
+    font-size: 5.9rem;
+  }
+  .genre_list {
+    font-size: 4.2rem;
+
+    width: 33rem;
+
+    line-height: 1.4;
+  }
+  .visible {
+    width: fit-content;
+    display: grid;
+    transition: 1s;
+  }
+  #genre_container {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 820px) {
+  .genre_list {
+    font-size: 3.8rem;
+    font-weight: 500;
+  }
+  .genre_list:hover {
+    font-size: 3.8rem;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+}
+@media (max-width: 540px) {
+  .genre_list {
+    font-size: 2.7rem;
+  }
+  .genre_list:hover {
+    font-size: 2.7rem;
+    opacity: 0.5;
+  }
+  #genres {
+    font-size: 4.3rem;
+  }
+}
+@media (max-width: 412px) {
+  .genre_list {
+    font-size: 3.1rem;
+  }
+  .genre_list:hover {
+    font-size: 3.1rem;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 393px) {
+  .visible {
+    max-width: 100%;
+    width: 85%;
+  }
+  #exit_door {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    opacity: 0.6;
+  }
+  #exit_door:hover {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    opacity: 1;
+    scale: 1.1;
+  }
+  .genre_list {
+    font-size: 3.7rem;
+    width: 33rem;
+    font-family: math;
+  }
+  .genre_list:hover {
+    font-size: 3.7rem;
+    width: 33rem;
+    font-family: math;
+    opacity: 0.5;
+  }
+  #genres {
+    font-size: 5rem;
+    margin-left: 0rem;
+    letter-spacing: 1px;
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 360px) {
+  .visible {
+    max-width: 100%;
+    width: 85%;
+    margin-top: 10rem;
+  }
+  #exit_door {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    opacity: 0.6;
+  }
+  #exit_door:hover {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    opacity: 1;
+    scale: 1.1;
+  }
+  .genre_list {
+    font-size: 3rem;
+    width: 33rem;
+    line-height: 1.6;
+  }
+  .genre_list:hover {
+    font-size: 3rem;
+    width: 33rem;
+    line-height: 1.6;
+    opacity: 0.5;
+  }
+  #genres {
+    font-size: 5rem;
+    margin-left: -20rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 280px) {
+  .visible {
+    max-width: 100%;
+    width: 85%;
+    margin-top: 1;
+  }
+  #exit_door {
+    font-size: 8rem;
+    display: block;
+    position: absolute;
+    top: 9rem;
+    right: 4rem;
+    opacity: 0.6;
+  }
+  #exit_door:hover {
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    background-color: #5b5656;
+    border: 0.1rem solid #6d6666;
+    border-radius: 0.7rem;
+    padding: 0.3rem;
+    scale: 1.1;
+  }
+  .genre_list {
+    font-size: 3.8rem;
+    width: 33rem;
+    font-family: sans-serif;
+  }
+  .genre_list:hover {
+    font-size: 3.8rem;
+    width: 33rem;
+    font-family: sans-serif;
+    opacity: 0.5;
+  }
+  #genres {
+    font-size: 5rem;
+    margin-left: 0rem;
+    letter-spacing: 1px;
+    margin-top: 10rem;
+  }
+}

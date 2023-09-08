@@ -1,0 +1,467 @@
+#movie-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  color: white;
+}
+.background_image {
+  background-size: cover;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  max-width: 100%;
+  padding-top: 5rem;
+  position: absolute;
+  text-align: left;
+  top: 3.43rem;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: 18rem 2rem 4rem #131111;
+  border-bottom: 0.2rem solid #131111;
+  border-top: 0.1rem solid #3b2e2e;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 80%);
+  pointer-events: none;
+}
+
+.brightness {
+  position: relative;
+}
+figure {
+  display: flex;
+  object-fit: cover;
+  position: inherit;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.movie_image_detail {
+  border-radius: 0.8rem;
+  margin-left: 11rem;
+  display: flex;
+  object-fit: cover;
+  height: 28rem;
+}
+
+.heading {
+  margin-top: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 0rem;
+  font-size: 1.9rem;
+}
+
+.movie_detail {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.spancontent {
+  line-height: 2;
+  margin-top: 0.81rem;
+  font-family: math;
+}
+.movierating {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-left: 0rem;
+}
+.movie_length {
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.movie_releasedate_detail {
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: 0.1rem solid wheat;
+  border-radius: 0.12rem;
+  padding: 0.06rem;
+}
+.genre {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 0rem;
+  margin-top: 1rem;
+}
+#genre_filter {
+  box-shadow: inset 0rem 0rem 1.25rem 0rem #c593ff;
+  background: #671515;
+  padding: 0.1rem;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  border: 0.01rem solid;
+  font-family: math;
+  margin-right: 0.3rem;
+}
+.overview_detail {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-family: "Tsukimi Rounded", sans-serif;
+  width: 70%;
+}
+#overview_title {
+  font-size: 1.56rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-bottom: -0.43rem;
+}
+#word {
+  font-weight: bold;
+  font-size: 1.12rem;
+  margin-right: 0.43rem;
+}
+
+/*Recommended Movies*/
+#RecoMovies {
+  position: sticky;
+  margin-left: 4rem;
+}
+.movie_img_reco {
+  height: 21rem;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+.movie_img_reco:hover {
+  height: 21rem;
+  object-fit: cover;
+  margin: auto;
+  border-radius: 0.5rem;
+  filter: brightness(0.4);
+  box-shadow: 0.18rem 0.18rem 0.18rem rgb(46, 37, 37);
+  cursor: pointer;
+  overflow: hidden;
+}
+.mainContent {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  transition: 1s;
+  width: 96%;
+  gap: 0.5rem;
+}
+.mainContent::-webkit-scrollbar {
+  background-color: #1f1c1c;
+  border-radius: 1rem;
+  height: 0.62rem;
+  transition: 1s;
+}
+.mainContent::-webkit-scrollbar-thumb:hover {
+  border-radius: 1rem;
+  background-color: #c4b7b7;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.reco_title {
+  border-left: 0.18rem solid var(--darkreader-border--purple);
+  font-size: 1.06rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.reco_rating_date {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+.reco_rating {
+  font-size: 1.12rem;
+  font-weight: bold;
+  display: flex;
+}
+.reco_release_date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  border: 0.12rem solid black;
+  width: 2.5rem;
+  font-weight: bold;
+  color: white;
+  background: #142019;
+  border-radius: 0.31rem;
+  height: 1.25rem;
+  border-top-left-radius: 0rem;
+  font-family: cursive;
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+  align-items: center;
+  font-size: 0.93rem;
+}
+#Director_span {
+  opacity: 0.5;
+  font-weight: bold;
+  font-size: 0.93rem;
+}
+
+/*Play button*/
+.play-btn {
+  width: 4.93rem;
+  height: 4.93rem;
+  background: radial-gradient(rgb(255 0 0 / 80%) 60%, rgb(248 175 175) 62%);
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  box-shadow: 0rem 0rem 1.56rem 0.18rem rgb(29 19 24 / 80%);
+}
+.videoBtn {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+#watchtralir {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-left: 0.56;
+  font-family: sans-serif;
+}
+.play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  transform-origin: center center;
+  width: 0;
+  height: 0;
+  border-top: 0.93rem solid transparent;
+  border-bottom: 0.93rem solid transparent;
+  border-left: 1.56rem solid #fff;
+  z-index: 100;
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.play-btn:before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 0.31rem solid rgba(255, 255, 255, 0.75);
+  top: -30%;
+  left: -30%;
+  background: rgba(198, 16, 0, 0);
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0rem 0rem 1.56rem 0.18rem rgba(255, 255, 255, 0.75),
+      0rem 0rem 1.56rem 10rem rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 1;
+    box-shadow: inset 0rem 0rem 1.56rem 0.18rem rgba(255, 255, 255, 0.75),
+      0rem 0rem 1.56rem 0.62rem rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: none;
+  }
+}
+
+/*MOVIE CAST DETAIL*/
+#castdetail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.93rem;
+  text-align: center;
+  transition: 1s;
+}
+#castdetail::-webkit-scrollbar {
+  height: 0.37rem;
+  background: white;
+  border-radius: 4rem;
+  background-color: rgb(37, 33, 33);
+}
+#castdetail::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+#cast_img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5rem;
+  border: 0.06rem solid;
+  box-shadow: 0rem 0rem 0, 31rem white;
+}
+#cast_img:hover {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 5rem;
+  border: 0.06rem solid;
+  box-shadow: 0rem 0rem 0, 31rem white;
+  scale: 1.1;
+  overflow: hidden;
+}
+#cast_title {
+  margin-left: 4rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+#acting_name {
+  opacity: 0.5;
+  font-size: 0.93rem;
+  font-family: math;
+  font-weight: bold;
+}
+#cast_name {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/*Movies video Customization*/
+#movieTralier {
+  z-index: 1;
+  position: sticky;
+}
+iframe {
+  height: 75%;
+  width: 60%;
+  border-radius: 0.31rem;
+  border: 0.2rem solid #ffffff;
+  box-shadow: 0rem 0rem 1rem 0rem grey;
+}
+.mainVideoContent {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.mainVideoContent.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+#notAvaliable {
+  font-size: 1.32rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  opacity: 0.6;
+}
+.exit-button {
+  position: absolute;
+  top: 4rem;
+  right: 1.25rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  font-weight: bold;
+  border: 1px solid wheat;
+}
+.exit-button:hover {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  background-color: #1f1d1d;
+  border: 0.1rem solid #968989;
+}
+
+#officialVideos {
+  position: sticky;
+}
+
+/*MOVIE RELATED VIDEOS*/
+.video-related-container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-video-player {
+  height: 14rem;
+  width: 96%;
+  border-radius: 0.5rem;
+  border: 0.2rem solid #564747;
+}
+.custom-video-player:hover {
+  border-radius: 0.5rem;
+  border: 0.2rem solid #c3b1c4;
+  border: 0.2rem slid rgb(108, 112, 99);
+  transition: 0.6s;
+}
+#movie_related_title {
+  font-size: 1.62rem;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  font-family: sans-serif;
+}
+#video_not_found {
+  text-align: center;
+  margin-top: 4rem;
+  font-family: math;
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 0.2;
+}
+#video_name {
+  font-size: 1.12rem;
+  text-align: center;
+  font-family: math;
+  opacity: 0.8;
+}
+#RecoMoviess {
+  position: sticky;
+  margin-left: 3.8rem;
+}
