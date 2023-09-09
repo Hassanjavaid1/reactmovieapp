@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ReactMovieApp/static/css/main.32806522.css",
-    "main.js": "/ReactMovieApp/static/js/main.7d8f0c0b.js",
-    "static/js/787.784592d1.chunk.js": "/ReactMovieApp/static/js/787.784592d1.chunk.js",
-    "static/media/movie_placeholder.png": "/ReactMovieApp/static/media/movie_placeholder.de8cb0a7786e6bf2b2de.png",
-    "static/media/iFlix.jpg": "/ReactMovieApp/static/media/iFlix.c7e9495bba88cb977ed3.jpg",
-    "index.html": "/ReactMovieApp/index.html",
-    "main.32806522.css.map": "/ReactMovieApp/static/css/main.32806522.css.map",
-    "main.7d8f0c0b.js.map": "/ReactMovieApp/static/js/main.7d8f0c0b.js.map",
-    "787.784592d1.chunk.js.map": "/ReactMovieApp/static/js/787.784592d1.chunk.js.map"
+    "main.css": "/reactmovieapp/static/css/main.32806522.css",
+    "main.js": "/reactmovieapp/static/js/main.9666e360.js",
+    "static/js/787.85dd9c30.chunk.js": "/reactmovieapp/static/js/787.85dd9c30.chunk.js",
+    "static/media/movie_placeholder.png": "/reactmovieapp/static/media/movie_placeholder.de8cb0a7786e6bf2b2de.png",
+    "static/media/iFlix.jpg": "/reactmovieapp/static/media/iFlix.c7e9495bba88cb977ed3.jpg",
+    "index.html": "/reactmovieapp/index.html",
+    "main.32806522.css.map": "/reactmovieapp/static/css/main.32806522.css.map",
+    "main.9666e360.js.map": "/reactmovieapp/static/js/main.9666e360.js.map",
+    "787.85dd9c30.chunk.js.map": "/reactmovieapp/static/js/787.85dd9c30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32806522.css",
-    "static/js/main.7d8f0c0b.js"
+    "static/js/main.9666e360.js"
   ]
 }
