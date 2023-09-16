@@ -56,4 +56,4 @@ Our intuitive search feature simplifies finding your favorite movies, while pers
 
 🐞 __Found a bug or want to contribute?__
 
-We welcome your feedback and contributions to make iFlix even better! Please feel free to reach out by creating an issue or a pull request on our GitHub repository. Together, let's make iFlix the ultimate movie-lover's companion!
+i welcome your feedback and contributions to make iFlix even better! Please feel free to reach out by creating an issue or a pull request on our GitHub repository. Together, let's make iFlix the ultimate movie-lover's companion!
