@@ -158,7 +158,7 @@ export default function MovieDetail() {
               </div>
             </div>
           </div>
-          <RecoMovie movieDetail={movieDetail} />
+          <RecoMovie movieDetail={movieDetail} key={id}/>
         </div>
       </artical>
     </>

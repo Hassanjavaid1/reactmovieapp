@@ -3,9 +3,6 @@ import { img_url, fetchData } from "../App";
 import { Link, useParams } from "react-router-dom";
 import { Base_Url, Api_Key } from "../App";
 import placeholder from "../Photos/movie_placeholder.png";
-import Slider from "react-slick";
-import { Slide } from 'react-slideshow-image';
-
 
 export default function RecoMovie({ movieDetail }) {
   const { id } = useParams();
@@ -39,10 +36,6 @@ export default function RecoMovie({ movieDetail }) {
   const name3 = movieDetail?.videos?.results[2]?.name.slice(0, 23);
   const videoKey4 = movieDetail?.videos?.results[3]?.key;
   const name4 = movieDetail?.videos?.results[3]?.name.slice(0, 23);
-
-  if (RecoMovies === "" || RecoMovies == null) {
-    console.log("reco movie not found");
-  }
 
   return (
     <>
@@ -123,16 +116,17 @@ export default function RecoMovie({ movieDetail }) {
           )}
         </div>
       </div>
-      <div id="RecoMoviess">
+      {/* <div id="RecoMoviess">
         <h2 className="heading">You May Also Like!</h2>
-        <div className="mainContent">
-        {RecoMovies.map(({id,poster_path,title,vote_average,release_date})=> (
-              <div id="RecoMoviesdirection">
-                {RecoMovies === "" ||
-                RecoMovies == null ||
-                RecoMovies === undefined ? (
-                  RecoVideoNotAvaliable
-                ) : (
+        {RecoMovies === null ||
+        RecoMovies === undefined ||
+        RecoMovies.length === 0 ? (
+          RecoVideoNotAvaliable
+        ) : (
+          <div className="mainContent">
+            {RecoMovies.map(
+              ({ title, poster_path, vote_average, release_date, id }) => (
+                <div id="RecoMoviesdirection">
                   <>
                     <Link to={`/moviedetail/${id}`}>
                       <img
@@ -158,19 +152,19 @@ export default function RecoMovie({ movieDetail }) {
                           className="fa-sharp fa-solid fa-star"
                           style={{ color: "#e4ff1a" }}
                         ></i>
-                        {(vote_average.toFixed(1))}
+                        {vote_average.toFixed(1)}
                       </div>
                       <span className="reco_release_date">
                         {parseInt(release_date)}
                       </span>
                     </div>
                   </>
-                )}
-              </div>
-            )
+                </div>
+              )
             )}
-        </div>
-      </div>
+          </div>
+        )}
+      </div> */}
     </>
   );
 }

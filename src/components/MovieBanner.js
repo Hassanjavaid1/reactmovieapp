@@ -31,7 +31,7 @@ export default function MovieBanner({isLoading,setisLoading}) {
   return (
     <div id="backdrop">
     <Slide>
-        {bannerMovie.map((slideImage, index,id)=> (
+        {bannerMovie.map((slideImage, index)=> (
           <>
           
           {isLoading?(
@@ -62,7 +62,7 @@ export default function MovieBanner({isLoading,setisLoading}) {
           <div className="bannerOverview">
             {slideImage.overview.slice(0, 200)}...
           </div>
-          <Link className="Link" to={`/moviedetail/${id}`}>
+          <Link className="Link" to={`/moviedetail/${slideImage.id}`}>
             <div className="buttonSection">
               <button id="btn">
                 <img src={buttonPlay} alt="" id="buttonPlay" />
