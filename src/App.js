@@ -39,6 +39,7 @@ function App() {
     fetchData(Base_Url + "/trending/all/day?" + Api_Key),
   ]).then(() => {
     setisLoading(false);
+    <Loader/>
   });
   const HideShow = () => {
     if (toggleMode === "hidden") {
