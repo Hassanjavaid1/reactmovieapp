@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense, useContext } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import MovieFilter from "./components/MovieFilter";
-
-import MovieBanner from "./components/MovieBanner";
-import TrendingMovies from "./components/TrendingMovies";
-import TopRatedMovies from "./components/TopRatedMovies";
-import UpcomingMovie from "./components/UpcomingMovie";
-import FreeMovie from "./components/FreeMovie";
 import Loader from "./components/Loader";
-import MovieDetail from "./components/MovieDetail";
-import Search from "./components/Search";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PageNotFound from "./components/PageNotFound";
-import FilterMovieCard from "./components/FilterMovieCard";
-import { MovieProvider } from "./components/MovieContext";
+import { MovieProvider, useMovieContext } from "./components/MovieContext";
+const Navbar = lazy(() => import("./components/Navbar"));
+const MovieFilter = lazy(() => import("./components/MovieFilter"));
+const MovieBanner = lazy(() => import("./components/MovieBanner"));
+const TrendingMovies = lazy(() => import("./components/TrendingMovies"));
+const TopRatedMovies = lazy(() => import("./components/TopRatedMovies"));
+const UpcomingMovie = lazy(() => import("./components/UpcomingMovie"));
+const FreeMovie = lazy(() => import("./components/FreeMovie"));
+const MovieDetail = lazy(() => import("./components/MovieDetail"));
+const Search = lazy(() => import("./components/Search"));
+const PageNotFound = lazy(() => import("./components/PageNotFound"));
+const FilterMovieCard = lazy(() => import("./components/FilterMovieCard"));
+const Footer = lazy(() => import("./components/Footer"));
 
 const Base_Url = "https://api.themoviedb.org/3";
 const Api_Key = "api_key=6758043f0537fea4f9c2c4e1534a395a";
@@ -29,7 +29,7 @@ const fetchData = async function (url) {
   }
 };
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
   const [toggleMode, setToggleMode] = useState("hidden");
 
   Promise.all([
@@ -38,7 +38,7 @@ function App() {
     fetchData(Base_Url + "/upcoming?" + Api_Key),
     fetchData(Base_Url + "/trending/all/day?" + Api_Key),
   ]).then(() => {
-    setLoading(false);
+    setisLoading(false);
   });
   const HideShow = () => {
     if (toggleMode === "hidden") {
@@ -49,21 +49,18 @@ function App() {
   };
   return (
     <>
-      <MovieProvider>
-        <BrowserRouter>
-          <Navbar
-            burger={
-              <div id="burger" onClick={HideShow}>
-                <li></li>
-                <li></li>
-                <li></li>
-              </div>
-            }
-          />
-
-          {loading ? (
-            <Loader />
-          ) : (
+      <Suspense fallback={<Loader />}>
+        <MovieProvider>
+          <BrowserRouter>
+            <Navbar
+              burger={
+                <div id="burger" onClick={HideShow}>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </div>
+              }
+            />
             <>
               <Search />
               <MovieFilter Mode={toggleMode} HideShow={HideShow} />
@@ -73,11 +70,27 @@ function App() {
                     path="/"
                     element={
                       <>
-                        <MovieBanner />
-                        <TrendingMovies />
-                        <TopRatedMovies />
-                        <UpcomingMovie />
-                        <FreeMovie />
+                        <MovieBanner
+                          isLoading={isLoading}
+                          setisLoading={setisLoading}
+                        />
+                        <TrendingMovies
+                          isLoading={isLoading}
+                          setisLoading={setisLoading}
+                        />
+                        <TopRatedMovies
+                          isLoading={isLoading}
+                          setisLoading={setisLoading}
+                        />
+                        <UpcomingMovie
+                          isLoading={isLoading}
+                          setisLoading={setisLoading}
+                        />
+                        <FreeMovie
+                          isLoading={isLoading}
+                          setisLoading={setisLoading}
+                        />
+                        <Footer />
                       </>
                     }
                   />
@@ -89,9 +102,9 @@ function App() {
                 <></>
               </div>
             </>
-          )}
-        </BrowserRouter>
-      </MovieProvider>
+          </BrowserRouter>
+        </MovieProvider>
+      </Suspense>
     </>
   );
 }

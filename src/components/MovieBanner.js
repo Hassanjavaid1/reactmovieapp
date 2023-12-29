@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { Api_Key, Base_Url, fetchData } from "../App";
 import "../components/CSS/HomeMedia.css";
 import "../components/CSS/MediaNavbar.css";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+import Skeleton from "react-loading-skeleton";
+
 const backdropURL = "https://image.tmdb.org/t/p/original";
-export default function MovieBanner() {
-  const [bannerMovie, setBannerMovie] = useState(null);
-  const [posterIndex, setPosterIndex] = useState(0);
+export default function MovieBanner({isLoading,setisLoading}) {
+  const [bannerMovie, setBannerMovie] = useState([]);
 
   async function fetchMovies() {
     let url = Base_Url + "/discover/movie?" + Api_Key;
@@ -19,51 +22,47 @@ export default function MovieBanner() {
     fetchMovies();
   }, []);
 
-  useEffect(() => {
-    if (bannerMovie && bannerMovie.length > 0) {
-      const interval = setInterval(() => {
-        setPosterIndex((prevIndex) => (prevIndex + 1) % bannerMovie.length);
-      }, 6000);
-
-      return () => {
-        clearInterval(interval);
-      };
-    }
-  }, [bannerMovie]);
-
   if (!bannerMovie || bannerMovie.length === 0) {
     return <div></div>;
   }
 
-  const currentMovie = bannerMovie[posterIndex];
 
+  
   return (
     <div id="backdrop">
-      <div
+    <Slide>
+        {bannerMovie.map((slideImage, index,id)=> (
+          <>
+          
+          {isLoading?(
+           <Skeleton height={'35rem'} style={{    basecolor: '#adadad',
+            highlightcolor:' #9d9d9d'}}/>
+          ):( 
+          <div key={index}
         id="background_poster"
         style={{
-          backgroundImage: `url(${backdropURL}${currentMovie.backdrop_path})`,
+          backgroundImage: `url(${backdropURL}${slideImage.backdrop_path})`,
         }}
       >
         <div className="banner_fadeBottom"></div>
         <div id="banner_detail">
-          <p id="banner_title">{currentMovie.title.slice(0, 30)}</p>
+          <p id="banner_title">{slideImage.title.slice(0, 30)}</p>
           <div className="DateRating">
             <div id="bannerRating">
               <i
                 className="fa-sharp fa-solid fa-star"
                 style={{ color: "#e4ff1a" }}
               ></i>
-              {currentMovie.vote_average.toFixed(1)}
+              {slideImage.vote_average.toFixed(1)}
             </div>
             <div className="releaseDate">
-              {parseInt(currentMovie.release_date)}
+              {parseInt(slideImage.release_date)}
             </div>
           </div>
           <div className="bannerOverview">
-            {currentMovie.overview.slice(0, 200)}...
+            {slideImage.overview.slice(0, 200)}...
           </div>
-          <Link className="Link" to={`/moviedetail/${currentMovie.id}`}>
+          <Link className="Link" to={`/moviedetail/${id}`}>
             <div className="buttonSection">
               <button id="btn">
                 <img src={buttonPlay} alt="" id="buttonPlay" />
@@ -72,7 +71,12 @@ export default function MovieBanner() {
             </div>
           </Link>
         </div>
-      </div>
+        </div>
+        )}
+        </>
+
+      ))}
+      </Slide>
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../components/CSS/MoviesItems.css";
 import "../components/CSS/HomeMedia.css";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
 
 import { Api_Key, img_url, Base_Url, fetchData } from "../App";
-export default function UpcomingMovie() {
+import HomeCart_Skeleton from "./HomeCart_Skeleton";
+export default function UpcomingMovie({isLoading}) {
   async function getUpcomingMovies() {
     let url = Base_Url + "/movie/upcoming?" + Api_Key;
     let data = await fetchData(url);
@@ -12,17 +14,30 @@ export default function UpcomingMovie() {
   }
   useEffect(() => {
     getUpcomingMovies();
-  });
+  },[]);
   const [movies, setmovies] = useState([]);
+  
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <>
       <div className="container">
         <h3>Upcoming Movies!</h3>
         <div id="MoviesItems">
+
+         
+          <Slider {...settings}>
           {movies.map(
             ({ title, poster_path, vote_average, release_date, id }) => (
               <>
                 <div id="cards">
+              {isLoading?(<HomeCart_Skeleton/>):(
+                <>
                   <Link to={`/moviedetail/${id}`}>
                     <img src={img_url + poster_path} alt="" id="movie_image" />
                   </Link>
@@ -39,12 +54,14 @@ export default function UpcomingMovie() {
                       {parseInt(release_date)}
                     </span>
                   </div>
+                  </>
+                )}
                 </div>
               </>
-            )
-          )}
-        </div>
-      </div>
-    </>
+                ))}
+          </Slider>
+          </div>
+          </div>
+          </>
   );
 }

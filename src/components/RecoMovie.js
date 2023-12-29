@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { img_url, fetchData } from "../App";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Base_Url, Api_Key } from "../App";
 import placeholder from "../Photos/movie_placeholder.png";
+import Slider from "react-slick";
+import { Slide } from 'react-slideshow-image';
+
 
 export default function RecoMovie({ movieDetail }) {
   const { id } = useParams();
@@ -40,6 +43,7 @@ export default function RecoMovie({ movieDetail }) {
   if (RecoMovies === "" || RecoMovies == null) {
     console.log("reco movie not found");
   }
+
   return (
     <>
       <div id="officialVideos">
@@ -66,9 +70,9 @@ export default function RecoMovie({ movieDetail }) {
               </div>
               <div className="video-related-container">
                 <div className="flex_direction">
-                  {videoKeys.map((index) => (
+                  {videoKeys.map((index1) => (
                     <iframe
-                      key={index}
+                      key={index1}
                       className="custom-video-player"
                       src={`https://www.youtube.com/embed/${videoKey2}?autoplay=1&controls=1`}
                       title={`Movie Trailer`}
@@ -82,9 +86,9 @@ export default function RecoMovie({ movieDetail }) {
               </div>
               <div className="video-related-container">
                 <div className="flex_direction">
-                  {videoKeys.map((index) => (
+                  {videoKeys.map((index2) => (
                     <iframe
-                      key={index}
+                      key={index2}
                       className="custom-video-player"
                       src={`https://www.youtube.com/embed/${videoKey3}?autoplay=1&controls=1`}
                       title={`Movie Trailer`}
@@ -98,9 +102,9 @@ export default function RecoMovie({ movieDetail }) {
               </div>
               <div className="video-related-container">
                 <div className="flex_direction">
-                  {videoKeys.map((index) => (
+                  {videoKeys.map((index3) => (
                     <iframe
-                      key={index}
+                      key={index3}
                       className="custom-video-player"
                       src={`https://www.youtube.com/embed/${videoKey4}?autoplay=0&controls=1`}
                       title={`Movie Trailer`}
@@ -122,8 +126,7 @@ export default function RecoMovie({ movieDetail }) {
       <div id="RecoMoviess">
         <h2 className="heading">You May Also Like!</h2>
         <div className="mainContent">
-          {RecoMovies.map(
-            ({ poster_path, title, release_date, vote_average, id }) => (
+        {RecoMovies.map(({id,poster_path,title,vote_average,release_date})=> (
               <div id="RecoMoviesdirection">
                 {RecoMovies === "" ||
                 RecoMovies == null ||
@@ -131,7 +134,7 @@ export default function RecoMovie({ movieDetail }) {
                   RecoVideoNotAvaliable
                 ) : (
                   <>
-                    <a href={`/moviedetail/${id}`}>
+                    <Link to={`/moviedetail/${id}`}>
                       <img
                         className="movie_img_reco"
                         src={
@@ -143,7 +146,7 @@ export default function RecoMovie({ movieDetail }) {
                         }
                         alt=""
                       />
-                    </a>
+                    </Link>
                     <div className="title-reco">
                       <h3 className="reco_title">
                         {String(title).slice(0, 19) + "..."}
@@ -155,7 +158,7 @@ export default function RecoMovie({ movieDetail }) {
                           className="fa-sharp fa-solid fa-star"
                           style={{ color: "#e4ff1a" }}
                         ></i>
-                        {vote_average.toFixed(1)}
+                        {(vote_average.toFixed(1))}
                       </div>
                       <span className="reco_release_date">
                         {parseInt(release_date)}
@@ -165,7 +168,7 @@ export default function RecoMovie({ movieDetail }) {
                 )}
               </div>
             )
-          )}
+            )}
         </div>
       </div>
     </>

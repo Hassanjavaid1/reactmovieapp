@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../components/CSS/MoviesItems.css";
 import "../components/CSS/HomeMedia.css";
+import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { Api_Key, img_url, Base_Url, fetchData } from "../App";
+import HomeCart_Skeleton from "./HomeCart_Skeleton";
 
-export default function TopRatedMovies() {
+export default function TopRatedMovies({isLoading}) {
   async function getTopRatedMovies() {
     let url = Base_Url + "/movie/top_rated?" + Api_Key;
     let data = await fetchData(url);
@@ -14,15 +16,27 @@ export default function TopRatedMovies() {
     getTopRatedMovies();
   }, []);
   const [movies, setmovies] = useState([]);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
     <>
       <div className="container">
         <h3>TopRated Movies!</h3>
         <div id="MoviesItems">
           <>
+        <Slider {...settings}>
             {movies.map(
               ({ title, poster_path, vote_average, release_date, id }) => (
                 <div id="cards">
+                {isLoading?(<HomeCart_Skeleton/>):(
+                    <>
                   <Link to={`/moviedetail/${id}`}>
                     <img src={img_url + poster_path} alt="" id="movie_image" />
                   </Link>
@@ -39,9 +53,12 @@ export default function TopRatedMovies() {
                       {parseInt(release_date)}
                     </span>
                   </div>
+                  </>
+                )}
                 </div>
               )
             )}
+          </Slider>
           </>
         </div>
       </div>

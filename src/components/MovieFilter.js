@@ -87,7 +87,8 @@ export default function MovieFilter(props) {
     setSidebarScroll(currentScrollPos);
   };
 
-  useEffect(() => {
+  useEffect(() => 
+  {
     fetchGenre();
     setInfiniteScroll(
       <InfiniteScroll
@@ -99,7 +100,8 @@ export default function MovieFilter(props) {
       />
     );
     setMovieGenreName(genreName);
-  }, [filterMovie.length, HasMore, handleLoadMore, genreName]);
+  }, []);
+  //filterMovie.length, HasMore, handleLoadMore, genreName
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

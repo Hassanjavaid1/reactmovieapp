@@ -156,16 +156,16 @@ figure {
   gap: 0.5rem;
 }
 .mainContent::-webkit-scrollbar {
-  background-color: #1f1c1c;
   border-radius: 1rem;
   height: 0.62rem;
-  transition: 1s;
+  background-color: #c4b7b7;
+  transition: 0.1s;
 }
 .mainContent::-webkit-scrollbar-thumb:hover {
   border-radius: 1rem;
-  background-color: #c4b7b7;
   opacity: 0;
-  transition: 0.5s;
+  background-color: rgb(255, 0, 0);
+ 
 }
 
 .reco_title {
@@ -313,10 +313,11 @@ figure {
 #castdetail {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.93rem;
   text-align: center;
   transition: 1s;
+  overflow: hidden;
+  width: 75rem;
+  margin: auto;
 }
 #castdetail::-webkit-scrollbar {
   height: 0.37rem;
@@ -330,19 +331,10 @@ figure {
 #cast_img {
   height: 10rem;
   width: 10rem;
-  border-radius: 5rem;
   border: 0.06rem solid;
-  box-shadow: 0rem 0rem 0, 31rem white;
+  object-fit: cover;
 }
-#cast_img:hover {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 5rem;
-  border: 0.06rem solid;
-  box-shadow: 0rem 0rem 0, 31rem white;
-  scale: 1.1;
-  overflow: hidden;
-}
+
 #cast_title {
   margin-left: 4rem;
   font-family: sans-serif;
@@ -462,6 +454,6 @@ iframe {
   opacity: 0.8;
 }
 #RecoMoviess {
-  position: sticky;
+  position: relative;
   margin-left: 3.8rem;
 }

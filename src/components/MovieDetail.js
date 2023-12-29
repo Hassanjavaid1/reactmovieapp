@@ -8,6 +8,7 @@ import "../components/CSS/Navbar.css";
 import { img_url, fetchData, Api_Key, Base_Url } from "../App";
 
 import { useParams } from "react-router-dom";
+import Slider from "react-slick";
 export default function MovieDetail() {
   const [movieDetail, setmovieDetail] = useState("");
   const [movieTrailer, setmovieTrailer] = useState("");
@@ -46,6 +47,16 @@ export default function MovieDetail() {
   useEffect(() => {
     getMovieDetail();
   }, []);
+
+  
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   const img_base_url = "https://image.tmdb.org/t/p/w500";
   const cast_profile_url = "https://image.tmdb.org/t/p/original/";
   const rating = Number(movieDetail.vote_average);
@@ -129,9 +140,8 @@ export default function MovieDetail() {
             <div id="top_cast">
               <h1 id="cast_title">Top Cast!</h1>
               <div id="castdetail">
-                {movieDetail.casts?.cast
-                  .slice(0, 6)
-                  .map(({ profile_path, name, character }) => (
+                <Slider {...settings}>
+                {movieDetail.casts?.cast.map(({ profile_path, name, character }) => (
                     <div className="movie_direction">
                       <img
                         src={cast_profile_url + profile_path}
@@ -144,6 +154,7 @@ export default function MovieDetail() {
                       </div>
                     </div>
                   ))}
+                  </Slider>
               </div>
             </div>
           </div>

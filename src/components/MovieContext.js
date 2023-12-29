@@ -5,6 +5,7 @@ export function MovieProvider({ children }) {
   const [infiniteScroll, setInfiniteScroll] = useState(null);
   const [filterMovie, setFilterMovie] = useState([]);
   const [MoviegenreName, setMovieGenreName] = useState("");
+  const [isLoading,setisLoading] = useState(true)
 
   return (
     <MovieContext.Provider
@@ -15,6 +16,8 @@ export function MovieProvider({ children }) {
         setInfiniteScroll,
         MoviegenreName,
         setMovieGenreName,
+        isLoading,
+        setisLoading,
       }}
     >
       {children}

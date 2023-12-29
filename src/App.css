@@ -1,157 +1,176 @@
 :root {
-    --base-font-size: 16px; 
-  }
-  
-  body {
-    font-size: var(--base-font-size);
-  }
-  
+  --base-font-size: 16px;
+}
 
-body{
-    background-color: #0c0c0d;
-     color: white;
-     margin: 0rem;
-     padding: 0rem;
+body {
+  font-size: var(--base-font-size);
 }
-body::-webkit-scrollbar{
-    width: 0.5rem;
-    border-radius: 0.4rem;
-    background-color: transparent;
-    scroll-behavior: smooth;
+
+body {
+  background-color: #0c0c0d;
+  color: white;
+  margin: 0rem;
+  padding: 0rem;
 }
-#background_poster{
-    background-size: cover;
-    box-sizing: border-box;
-    color: rgb(15, 18, 19);
-    color-scheme: dark light;
-    display: block;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    height: 37.668rem;
-    line-height: 1.5rem;
-    max-width: 100%;
-    min-height: 37.66rem;
-    padding-top: 5rem;
-    text-align: left;
-    width: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    border-top: 0.125rem solid #1c1a1a;
-    transition:2s;
-    
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  scroll-behavior: smooth;
 }
-#banner_detail{
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-align: center;
-    max-width: 20.2rem;
-    height: 4rem;
-    margin-left: 4rem;
-    margin-top: 7rem;
-    z-index: 1;
-    position: sticky;
-    transition:2s;
+#background_poster {
+  background-size: cover;
+  box-sizing: border-box;
+  color: rgb(15, 18, 19);
+  color-scheme: dark light;
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 37.668rem;
+  line-height: 1.5rem;
+  max-width: 100%;
+  min-height: 37.66rem;
+  padding-top: 5rem;
+  text-align: left;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border-top: 0.125rem solid #1c1a1a;
+  transition: 2s;
 }
-#banner_title{
-    display: inline;
-    color: white;
-    font-size: 3rem;
-    line-height: 1.1;
-    margin: 0;
-    margin-bottom: 1rem;
-    max-width: 40%;
-    font-weight: bold;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: center;
-    margin: auto;
-    transition:2s;
+#banner_detail {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  max-width: 20.2rem;
+  height: 4rem;
+  margin-left: 4rem;
+  margin-top: 7rem;
+  z-index: 1;
+  position: sticky;
+  transition: 2s;
 }
-.DateRating{
-    margin-bottom: 0.87rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 1.5;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    font-family: math;
-    transition:2s;
+#banner_title {
+  display: inline;
+  color: white;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: 1rem;
+  max-width: 40%;
+  font-weight: bold;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin: auto;
+  transition: 2s;
 }
-.bannerOverview{
-    font-size: 1.08rem;
-    color: white;
-    text-align: center;
-    transition:2s;
+.DateRating {
+  margin-bottom: 0.87rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: math;
+  transition: 2s;
+}
+.bannerOverview {
+  font-size: 1.08rem;
+  color: white;
+  text-align: center;
+  transition: 2s;
 }
 .buttonSection {
-    margin-top: 0.56rem;
-    z-index: 9;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 0.56rem;
+  z-index: 9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #buttonPlay {
-    vertical-align: middle;
-    border-style: none;
-    width: 1.62rem;
-    height:1.62rem;
-  }
-  #btn {
-    font-weight: bold;
-    font-family: sans-serif;
-    border-radius: 0.43rem;
-    padding: 0.4rem;
-    font-size: 1.18rem;
-    background-color: #ea1414;
-    cursor: pointer;
-    border: 0.06rem solid black;
-    box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem white;
-  }
-  #btn:hover {
-    box-shadow: 0.12rem 0.12rem 0.12rem 0.12rem rgb(182, 177, 177);
+  vertical-align: middle;
+  border-style: none;
+  width: 1.62rem;
+  height: 1.62rem;
+}
+#btn {
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 0.43rem;
+  padding: 0.4rem;
+  font-size: 1.18rem;
+  background-color: #ea1414;
+  cursor: pointer;
+  border: 0.06rem solid black;
+  box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem white;
+}
+#btn:hover {
+  box-shadow: 0.12rem 0.12rem 0.12rem 0.12rem rgb(182, 177, 177);
   font-weight: bold;
   font-family: sans-serif;
   border-radius: 0.43rem;
   padding: 0.3rem;
   background-color: #c01616;
   cursor: pointer;
- font-size: 1.12rem;
- transition: 0.1s;
+  font-size: 1.12rem;
+  transition: 0.1s;
 }
-.releaseDate{
-    border: 0.12rem solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 1.37rem;
-    border-radius: 0.25rem;
-    box-shadow: 0rem 0rem 0.12rem 0rem;
-    background-color: #222226;
-    transition:2s;
-}
-.banner_fadeBottom{
-    height: 20rem;
-    background: linear-gradient( 180deg, transparent, rgba(37, 37, 37, 0.61), #141414 );
-    position: absolute;
-    left: 0;
-    width: 100%;
-    border-bottom: 2px solid #1d1a1a;
-    top: 21.7rem;
-    transition:2s;
-}
-.Link{
-    text-decoration: none;
+.releaseDate {
+  border: 0.12rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.37rem;
+  border-radius: 0.25rem;
+  box-shadow: 0rem 0rem 0.12rem 0rem;
+  background-color: #222226;
+  transition: 2s;
 }
 
-.visible{
-    display: block;
-    transition: 0.5s;
+.banner_fadeBottom {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgb(255 0 0 / 0%),
+    #00000021
+  );
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 33rem;
+  transition: 0.2s;
 }
-.hidden{
-    display: none;
-    transition: 0.5s;
+
+.Link {
+  text-decoration: none;
+}
+.react-slideshow-container .default-nav:first-of-type {
+   background-color: #F61211;
+   left: 7ren;
+}
+
+
+.react-slideshow-container .default-nav:last-of-type {
+    background-color: #F61211;
+    
+}
+.react-slideshow-container .nav:first-of-type {
+   left: 7rem!important;
+}
+.react-slideshow-container .default-nav:last-of-type {
+    right: 7rem!important;
+}
+
+.visible {
+  display: block;
+  transition: 0.5s;
+}
+.hidden {
+  display: none;
+  transition: 0.5s;
 }

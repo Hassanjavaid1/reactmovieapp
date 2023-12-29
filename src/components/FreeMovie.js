@@ -3,9 +3,12 @@ import "../components/CSS/MoviesItems.css";
 import { Link } from "react-router-dom";
 import placeholder from "../Photos/movie_placeholder.png";
 import "../components/CSS/HomeMedia.css";
-import { Api_Key, img_url, Base_Url, fetchData } from "../App";
+import Slider from "react-slick";
 
-export default function FreeMovie() {
+import { Api_Key, img_url, Base_Url, fetchData } from "../App";
+import HomeCart_Skeleton from "./HomeCart_Skeleton";
+
+export default function FreeMovie({isLoading}) {
   async function getFreeMovies() {
     let url =
       Base_Url + "/discover/movie?" + Api_Key + "&watch/providers=8|123";
@@ -16,14 +19,25 @@ export default function FreeMovie() {
     getFreeMovies();
   }, []);
   const [movies, setmovies] = useState([]);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <div className="container">
       <h3>Free to Watch!</h3>
       <div id="MoviesItems">
+        <Slider {...settings}>
         {movies.map(
           ({ title, poster_path, vote_average, release_date, id }) => (
             <>
               <div id="cards">
+            {isLoading?(<HomeCart_Skeleton/>):(
+              <>
                 <Link to={`/moviedetail/${id}`}>
                   <img
                     src={
@@ -48,10 +62,13 @@ export default function FreeMovie() {
                   </div>
                   <span id="movie_release_date">{parseInt(release_date)}</span>
                 </div>
+                </>
+            )}
               </div>
             </>
           )
         )}
+        </Slider>
       </div>
     </div>
   );
