@@ -51,7 +51,7 @@ function App() {
     <>
       <Suspense fallback={<Loader />}>
         <MovieProvider>
-          <BrowserRouter>
+          <BrowserRouter basename="reactmovieapp">
             <Navbar
               burger={
                 <div id="burger" onClick={HideShow}>
