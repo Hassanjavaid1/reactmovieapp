@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactmovieapp/static/css/main.1ba87a89.css",
-    "main.js": "/reactmovieapp/static/js/main.d66c4189.js",
+    "main.js": "/reactmovieapp/static/js/main.aef4e6a8.js",
     "static/css/699.67740bcd.chunk.css": "/reactmovieapp/static/css/699.67740bcd.chunk.css",
     "static/js/699.fdbe1054.chunk.js": "/reactmovieapp/static/js/699.fdbe1054.chunk.js",
     "static/css/380.bdfa75fa.chunk.css": "/reactmovieapp/static/css/380.bdfa75fa.chunk.css",
@@ -22,20 +22,18 @@
     "static/js/104.a4ce6843.chunk.js": "/reactmovieapp/static/js/104.a4ce6843.chunk.js",
     "static/css/664.a405653a.chunk.css": "/reactmovieapp/static/css/664.a405653a.chunk.css",
     "static/js/664.a8a7ec8c.chunk.js": "/reactmovieapp/static/js/664.a8a7ec8c.chunk.js",
-    "static/css/156.d8f9ffa1.chunk.css": "/reactmovieapp/static/css/156.d8f9ffa1.chunk.css",
-    "static/js/156.caaaec93.chunk.js": "/reactmovieapp/static/js/156.caaaec93.chunk.js",
+    "static/css/15.5bc1c515.chunk.css": "/reactmovieapp/static/css/15.5bc1c515.chunk.css",
+    "static/js/15.ca5cc821.chunk.js": "/reactmovieapp/static/js/15.ca5cc821.chunk.js",
     "static/js/787.303c7c46.chunk.js": "/reactmovieapp/static/js/787.303c7c46.chunk.js",
     "static/js/910.e189ca0b.chunk.js": "/reactmovieapp/static/js/910.e189ca0b.chunk.js",
     "static/js/717.bc08c184.chunk.js": "/reactmovieapp/static/js/717.bc08c184.chunk.js",
-    "static/js/615.c2610156.chunk.js": "/reactmovieapp/static/js/615.c2610156.chunk.js",
-    "static/js/3.00519c0e.chunk.js": "/reactmovieapp/static/js/3.00519c0e.chunk.js",
+    "static/js/545.1ff8ed6b.chunk.js": "/reactmovieapp/static/js/545.1ff8ed6b.chunk.js",
     "static/js/346.ec5af4fc.chunk.js": "/reactmovieapp/static/js/346.ec5af4fc.chunk.js",
-    "static/js/774.67185139.chunk.js": "/reactmovieapp/static/js/774.67185139.chunk.js",
     "static/media/movie_placeholder.png": "/reactmovieapp/static/media/movie_placeholder.de8cb0a7786e6bf2b2de.png",
     "static/media/iFlix.jpg": "/reactmovieapp/static/media/iFlix.c7e9495bba88cb977ed3.jpg",
     "index.html": "/reactmovieapp/index.html",
     "main.1ba87a89.css.map": "/reactmovieapp/static/css/main.1ba87a89.css.map",
-    "main.d66c4189.js.map": "/reactmovieapp/static/js/main.d66c4189.js.map",
+    "main.aef4e6a8.js.map": "/reactmovieapp/static/js/main.aef4e6a8.js.map",
     "699.67740bcd.chunk.css.map": "/reactmovieapp/static/css/699.67740bcd.chunk.css.map",
     "699.fdbe1054.chunk.js.map": "/reactmovieapp/static/js/699.fdbe1054.chunk.js.map",
     "380.bdfa75fa.chunk.css.map": "/reactmovieapp/static/css/380.bdfa75fa.chunk.css.map",
@@ -56,18 +54,16 @@
     "104.a4ce6843.chunk.js.map": "/reactmovieapp/static/js/104.a4ce6843.chunk.js.map",
     "664.a405653a.chunk.css.map": "/reactmovieapp/static/css/664.a405653a.chunk.css.map",
     "664.a8a7ec8c.chunk.js.map": "/reactmovieapp/static/js/664.a8a7ec8c.chunk.js.map",
-    "156.d8f9ffa1.chunk.css.map": "/reactmovieapp/static/css/156.d8f9ffa1.chunk.css.map",
-    "156.caaaec93.chunk.js.map": "/reactmovieapp/static/js/156.caaaec93.chunk.js.map",
+    "15.5bc1c515.chunk.css.map": "/reactmovieapp/static/css/15.5bc1c515.chunk.css.map",
+    "15.ca5cc821.chunk.js.map": "/reactmovieapp/static/js/15.ca5cc821.chunk.js.map",
     "787.303c7c46.chunk.js.map": "/reactmovieapp/static/js/787.303c7c46.chunk.js.map",
     "910.e189ca0b.chunk.js.map": "/reactmovieapp/static/js/910.e189ca0b.chunk.js.map",
     "717.bc08c184.chunk.js.map": "/reactmovieapp/static/js/717.bc08c184.chunk.js.map",
-    "615.c2610156.chunk.js.map": "/reactmovieapp/static/js/615.c2610156.chunk.js.map",
-    "3.00519c0e.chunk.js.map": "/reactmovieapp/static/js/3.00519c0e.chunk.js.map",
-    "346.ec5af4fc.chunk.js.map": "/reactmovieapp/static/js/346.ec5af4fc.chunk.js.map",
-    "774.67185139.chunk.js.map": "/reactmovieapp/static/js/774.67185139.chunk.js.map"
+    "545.1ff8ed6b.chunk.js.map": "/reactmovieapp/static/js/545.1ff8ed6b.chunk.js.map",
+    "346.ec5af4fc.chunk.js.map": "/reactmovieapp/static/js/346.ec5af4fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1ba87a89.css",
-    "static/js/main.d66c4189.js"
+    "static/js/main.aef4e6a8.js"
   ]
 }
