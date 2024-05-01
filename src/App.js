@@ -14,8 +14,7 @@ const MovieDetail = lazy(() => import("./components/MovieDetail"));
 const Search = lazy(() => import("./components/Search"));
 const PageNotFound = lazy(() => import("./components/PageNotFound"));
 const FilterMovieCard = lazy(() => import("./components/FilterMovieCard"));
-const Footer = lazy(() => import("./components/Footer"));
-
+const Main_footer = React.lazy(()=>import('./components/Main_footer'))
 const Base_Url = "https://api.themoviedb.org/3";
 const Api_Key = "api_key=6758043f0537fea4f9c2c4e1534a395a";
 const img_url = "https://image.tmdb.org/t/p/w500";
@@ -91,7 +90,6 @@ function App() {
                           isLoading={isLoading}
                           setisLoading={setisLoading}
                         />
-                        <Footer />
                       </>
                     }
                   />
@@ -101,6 +99,8 @@ function App() {
                   <Route path="/MovieDetail/:id" element={<MovieDetail />} />
                 </Routes>
                 <></>
+                <Main_footer/>
+
               </div>
             </>
           </BrowserRouter>
