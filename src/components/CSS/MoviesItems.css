@@ -1,12 +1,13 @@
 #MoviesItems {
   margin-left: 1rem;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
   overflow: hidden;
   padding-bottom: 1.8rem;
-  width: 75rem;
   margin: auto;
+  width: 90%;
 }
+
 #MoviesItems::-webkit-scrollbar {
   background-color: #312828;
   height: 0.5rem;
@@ -33,9 +34,11 @@ h3 {
   object-fit: cover;
   object-position: 50% 20%;
   margin: auto;
+  transition: transform 0.2s ease-in-out;
 }
 #movie_image:hover {
-  filter: brightness(0.8);
+  /* transform: rotate3d(0, 1, 0, 33deg); */
+  transform: skew(0deg, -4deg);
 }
 h4 {
   border-left: 0.18rem solid var(--purple);
@@ -60,85 +63,42 @@ h4 {
   justify-content: center;
   align-items: center;
 }
-#movie_release_date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-  border: 0.12rem solid black;
-  width: 2.56rem;
-  font-weight: bold;
-  color: white;
-  background: #142019;
-  font-size: 1rem;
-  border-radius: 0.3rem;
-  border-top-left-radius: 0rem;
-  font-family: math;
-  margin-top: 0.7rem;
-  margin-left: 0.7em;
-  align-items: center;
-}
+.card_releaseDate {
+  background: #b3acac36;
+  padding: 1px 5px;
+  border-radius: 3px;}
 
+.slick-slider {
+  width: 100%;
+}
 .slick-list {
-   overflow: visible;
+  overflow: visible;
   margin: 0;
   padding: 0;
   width: 13.1rem;
 }
-
 .slick-prev {
   left: auto;
-  right: 4.8rem;
+  left: 4.8rem;
   z-index: 99;
 }
 .slick-next {
-  left: 70rem;
+  right: 4.8rem;
   z-index: 99;
 }
 .slick-prev:before {
-  content: '←';
-  color: #F61211;
+  content: "←";
+  color: #f61211;
   font-size: 2.2rem;
 }
-
-.slick-next:before, [dir=rtl] .slick-prev:before {
-  content: '→';
-  content: '→';
-  color: #F61211;
+.slick-next:before,
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+  content: "→";
+  color: #f61211;
   font-size: 2.2rem;
 }
-.slick-dots{
-  display: none!important;
+.slick-dots {
+  display: none !important;
 }
 
-
-
-/* React Loading Skeleton */
-
-.homecart_img_skeleton{
-  width: 14.5rem!important;
-  border-radius: 0rem!important;
-  height: 18rem!important;
-  --base-color: #7e7979;
-    --highlight-color: #bfbfbf;
-
-}
-.homecart_title_skeleton{
-  width: 13rem!important;
-  margin-left: 0.7rem;
-    margin-top: 0.8rem;
-    --base-color: #7e7979;
-    --highlight-color: #bfbfbf;
-
-}
-.homecart_desc{
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-  grid-gap: 1rem;
-  margin-left: 0.6rem;
-  margin-top: 1rem;
-  --base-color: #7e7979;
-    --highlight-color: #bfbfbf;
-
-
-}

@@ -1,38 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-import "./CSS/MovieDetail.css";
+import "../components/CSS/MovieDetail.css";
+import "../components/CSS/MoviesItems.css";
 import RecoMovie from "../components/RecoMovie";
-import "./CSS/MediaMovieDetail.css";
 import "../components/CSS/SideMedia.css";
 import "../components/CSS/Navbar.css";
-import { img_url, fetchData, Api_Key, Base_Url } from "../App";
-
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
+import { HomeContext } from "../Api/HomeApi";
+import placeholder from "../Photos/movie_placeholder.png";
 export default function MovieDetail() {
+  const { img_url, Api_Key, Base_Url,backdropURL } = useContext(HomeContext);
+
   const [movieDetail, setmovieDetail] = useState("");
   const [movieTrailer, setmovieTrailer] = useState("");
   const [TrailerNotAvaliable, setTrailerNotAvaliable] = useState("");
   const [isVideoPlay, setisVideoPaly] = useState(false);
   const [isBackgroundBlur, setisBackgroundBlur] = useState(false);
-  const { id } = useParams();
-  const getMovieDetail = async () => {
-    let url = `https://api.themoviedb.org/3/movie/${id}?api_key=6758043f0537fea4f9c2c4e1534a395a&append_to_response=casts,crew,videos,images,releases`;
-    let data = await fetchData(url);
-    setmovieDetail(data);
-  };
-  //Getting Movie tralier
-  const getMovieTrailer = async () => {
-    const url = `${Base_Url}/movie/${id}/videos?${Api_Key}`;
-    const data = await fetchData(url);
 
-    const officialTrailer = data.results.find(
-      (video) => video.type === "Trailer"
-    );
-    if (officialTrailer) {
-      setmovieTrailer(officialTrailer.key);
-    } else {
-      setTrailerNotAvaliable("Oops! Movie Tralier is not Avaliable!");
+  const { id } = useParams();
+
+  const getMovieDetail = async () => {
+    try {
+      let res = await fetch(
+        `${Base_Url}/movie/${id}?${Api_Key}&append_to_response=casts,crew,videos,images,releases`
+      );
+      let data = await res.json();
+      setmovieDetail(data);
+    } catch (err) {
+      return console.error("Error Occured:", err);
+    }
+  };
+  //Getting Movie trailer
+  const getMovieTrailer = async () => {
+    try {
+      const url = await fetch(`${Base_Url}/movie/${id}/videos?${Api_Key}`);
+      const data = await url.json();
+      const officialTrailer = data.results.find(
+        (video) => video.type == "Trailer"
+      );
+      if (officialTrailer) {
+        setmovieTrailer(officialTrailer.key);
+      } else {
+        setTrailerNotAvaliable("Opps! Movie Trailer is not Avaliable!");
+      }
+    } catch (err) {
+      setTrailerNotAvaliable("Something went wrong Try again...");
     }
   };
   const watchTrailer = () => {
@@ -40,6 +53,7 @@ export default function MovieDetail() {
     setisBackgroundBlur(true);
     getMovieTrailer();
   };
+
   const handleExitClick = () => {
     setisVideoPaly(false);
   };
@@ -48,17 +62,16 @@ export default function MovieDetail() {
     getMovieDetail();
   }, []);
 
-  
-  var settings = {
-    dots: true,
+  const settings = {
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 5,
+    arrows: true,
   };
 
-  const img_base_url = "https://image.tmdb.org/t/p/w500";
-  const cast_profile_url = "https://image.tmdb.org/t/p/original/";
+
   const rating = Number(movieDetail.vote_average);
   return (
     <>
@@ -66,7 +79,7 @@ export default function MovieDetail() {
         <div
           className="background_image"
           style={{
-            backgroundImage: `url(${img_base_url + movieDetail.backdrop_path})`,
+            backgroundImage: `url(${img_url + movieDetail.backdrop_path})`,
           }}
         >
           <div className="brightness">
@@ -91,21 +104,22 @@ export default function MovieDetail() {
                     {parseInt(movieDetail.release_date)}
                   </span>
                 </div>
-                {movieDetail.genres?.map(({ name }) => (
-                  <span id="genre_filter">{name + " "}</span>
-                ))}
+                <div className="marginTop">
+                  {movieDetail.genres?.map(({ name }) => (
+                    <span className="genre_filter">{name + " "}</span>
+                  ))}
+                </div>
                 <h1 id="overview_title">Overview</h1>
                 <p className="overview_detail">
                   {String(movieDetail.overview).slice(0, 400)}
                 </p>
                 <p className="Director">
                   <span id="word">Directed by:</span>
-                  {movieDetail.casts?.crew.slice(0, 2).map(({ id, name }) => (
+                  {movieDetail.casts?.crew.slice(0, 10).map(({ id, name }) => (
                     <span id="Director_span" key={id}>
-                      {`${name} , `}
+                      {`${name}, `} etc.
                     </span>
                   ))}
-                  ...
                 </p>
 
                 {isVideoPlay ? (
@@ -141,24 +155,36 @@ export default function MovieDetail() {
               <h1 id="cast_title">Top Cast!</h1>
               <div id="castdetail">
                 <Slider {...settings}>
-                {movieDetail.casts?.cast.map(({ profile_path, name, character }) => (
-                    <div className="movie_direction">
-                      <img
-                        src={cast_profile_url + profile_path}
-                        alt=""
-                        id="cast_img"
-                      />
-                      <div id="cast_name">{name}</div>
-                      <div id="acting_name">
-                        {character.slice(0, 10) + "..."}
+                  {movieDetail.casts?.cast.map(
+                    ({ profile_path, name, character }) => (
+                      <div className="movie_direction">
+                        <img
+                          src={
+                            profile_path
+                              ? backdropURL + profile_path
+                              : placeholder
+                          }
+                          alt=""
+                          className="cast_img"
+                        />
+                        <div className="marginTop">
+                          <div className="cast_name">
+                            {String(name).slice(0, 18)}
+                            {String(name).length > 18 ? "..." : ""}
+                          </div>
+                          <div className="acting_name">
+                            {character.slice(0, 18)}
+                            {String(character).length > 18 ? "..." : ""}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                  </Slider>
+                    )
+                  )}
+                </Slider>
               </div>
             </div>
           </div>
-          <RecoMovie movieDetail={movieDetail} key={id}/>
+          <RecoMovie movieDetail={movieDetail} key={id} />
         </div>
       </artical>
     </>

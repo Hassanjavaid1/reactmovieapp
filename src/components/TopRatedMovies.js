@@ -1,67 +1,73 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../components/CSS/MoviesItems.css";
-import "../components/CSS/HomeMedia.css";
-import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { Api_Key, img_url, Base_Url, fetchData } from "../App";
-import HomeCart_Skeleton from "./HomeCart_Skeleton";
+import placeholder from "../Photos/movie_placeholder.png";
+import "../components/CSS/MediaQueries/HomeMedia.css";
+import Slider from "react-slick";
 
-export default function TopRatedMovies({isLoading}) {
-  async function getTopRatedMovies() {
-    let url = Base_Url + "/movie/top_rated?" + Api_Key;
-    let data = await fetchData(url);
-    setmovies(data.results);
-  }
-  useEffect(() => {
-    getTopRatedMovies();
-  }, []);
-  const [movies, setmovies] = useState([]);
+import { HomeContext } from "../Api/HomeApi";
 
-  var settings = {
-    dots: true,
+export default function TopRatedMovies() {
+  const { topRatedMoviesData, isLoading, img_url } = useContext(HomeContext);
+
+  const settings = {
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 5,
+    arrows: true,
   };
 
   return (
-    <>
-      <div className="container">
-        <h3>TopRated Movies!</h3>
-        <div id="MoviesItems">
-          <>
+    <div className="container">
+      <h3>TopRated Movies!</h3>
+      <div id="MoviesItems">
         <Slider {...settings}>
-            {movies.map(
-              ({ title, poster_path, vote_average, release_date, id }) => (
+          {topRatedMoviesData.map(
+            ({
+              title,
+              original_name,
+              vote_count,
+              poster_path,
+              vote_average,
+              release_date,
+              first_air_date,
+              id,
+            }) => (
+              <>
                 <div id="cards">
-                {isLoading?(<HomeCart_Skeleton/>):(
-                    <>
-                  <Link to={`/moviedetail/${id}`}>
-                    <img src={img_url + poster_path} alt="" id="movie_image" />
-                  </Link>
-                  <h4>{String(title.slice(0, 19) + "...")}</h4>
-                  <div id="movie_date_rating">
-                    <div id="movie_rating">
-                      <i
-                        className="fa-sharp fa-solid fa-star"
-                        style={{ color: "#e4ff1a" }}
-                      ></i>
-                      {vote_average.toFixed(1)}
+                  <>
+                    <Link to={`/moviedetail/${id}`}>
+                      <img
+                        src={img_url + poster_path || placeholder}
+                        alt=""
+                        id="movie_image"
+                      />
+                    </Link>
+                    <h4>
+                      {String(original_name || title).slice(0, 20)}
+                      {String(original_name || title).length > 20 ? "..." : ""}
+                    </h4>
+                    <div id="movie_date_rating">
+                      <div id="movie_rating">
+                        <i
+                          className="fa-sharp fa-solid fa-star"
+                          style={{ color: "#e4ff1a" }}
+                        ></i>
+                        {(vote_average || vote_count).toFixed(1)}
+                      </div>
+                      <span className=" card_releaseDate">
+                        {parseInt(release_date || first_air_date)}
+                      </span>
                     </div>
-                    <span id="movie_release_date">
-                      {parseInt(release_date)}
-                    </span>
-                  </div>
                   </>
-                )}
                 </div>
-              )
-            )}
-          </Slider>
-          </>
-        </div>
+              </>
+            )
+          )}
+        </Slider>
       </div>
-    </>
+    </div>
   );
 }

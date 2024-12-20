@@ -8,15 +8,12 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "gh-pages": "^5.0.0",
-    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-infinite-scroll-component": "^6.1.0",
-    "react-loading-skeleton": "^3.3.1",
-    "react-router": "^6.15.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.29.0",
     "react-slideshow-image": "^4.3.0",
     "web-vitals": "^2.1.4"
@@ -49,6 +46,6 @@
   },
   "description": "iFlix is a cutting-edge movie information platform that provides an immersive experience for movie enthusiasts.",
   "main": "index.js",
-  "author": "",
+  "author": "Hassan",
   "license": "ISC"
 }

@@ -1,12 +1,24 @@
 import { Link } from "react-router-dom";
 import "../components/CSS/Navbar.css";
 import logo from "../Photos/iFlix.jpg";
-import "../components/CSS/MediaNavbar.css";
+import '../components/CSS/MediaQueries/MediaNavbar.css'
+import { GiHamburgerMenu } from "react-icons/gi";
+
 import { useEffect, useState } from "react";
 
-export default function Navbar(props) {
+export default function Navbar(prps) {
   const [prevScroll, setprevScroll] = useState(0);
   const [visible, setvisible] = useState(true);
+   const [toggleMode, setToggleMode] = useState("hidden");
+  
+    const HideShow = () => {
+      if (toggleMode === "hidden") {
+        setToggleMode("visible");
+      } else {
+        setToggleMode("hidden");
+      }
+    }
+    
   const handleScroll = () => {
     const currentScroll = window.scrollY;
     setvisible(prevScroll > currentScroll);
@@ -22,7 +34,7 @@ export default function Navbar(props) {
     <>
       <div className={`navbar ${visible ? "" : "sticky"} `}>
         <div id="navbar">
-          {props.burger}
+        <GiHamburgerMenu id="burger" onClick={HideShow} />
           <Link className="Link" to="/">
             <div id="iFlix">
               <img src={logo} alt="" id="iFlixlogo" />

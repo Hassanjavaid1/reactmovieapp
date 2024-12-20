@@ -3,21 +3,20 @@
 }
 
 body {
-  font-size: var(--base-font-size);
-}
-
-body {
   background-color: #0c0c0d;
+  font-size: var(--base-font-size);
   color: white;
   margin: 0rem;
   padding: 0rem;
+  overflow-x: hidden;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 0.5rem;
   border-radius: 0.4rem;
   background-color: transparent;
   scroll-behavior: smooth;
-}
+} */
+
 #background_poster {
   background-size: cover;
   box-sizing: border-box;
@@ -45,7 +44,7 @@ body::-webkit-scrollbar {
   max-width: 20.2rem;
   height: 4rem;
   margin-left: 4rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   z-index: 1;
   position: sticky;
   transition: 2s;
@@ -67,6 +66,7 @@ body::-webkit-scrollbar {
 }
 .DateRating {
   margin-bottom: 0.87rem;
+  margin-top: 0.87rem;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.5;
@@ -85,12 +85,9 @@ body::-webkit-scrollbar {
   transition: 2s;
 }
 .buttonSection {
-  margin-top: 0.56rem;
+  margin-top: 1rem;
   z-index: 9;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 #buttonPlay {
   vertical-align: middle;
@@ -99,50 +96,45 @@ body::-webkit-scrollbar {
   height: 1.62rem;
 }
 #btn {
-  font-weight: bold;
-  font-family: sans-serif;
-  border-radius: 0.43rem;
-  padding: 0.4rem;
-  font-size: 1.18rem;
-  background-color: #ea1414;
-  cursor: pointer;
-  border: 0.06rem solid black;
-  box-shadow: 0.06rem 0.06rem 0.06rem 0.06rem white;
-}
-#btn:hover {
-  box-shadow: 0.12rem 0.12rem 0.12rem 0.12rem rgb(182, 177, 177);
-  font-weight: bold;
-  font-family: sans-serif;
-  border-radius: 0.43rem;
-  padding: 0.3rem;
-  background-color: #c01616;
-  cursor: pointer;
-  font-size: 1.12rem;
-  transition: 0.1s;
-}
-.releaseDate {
-  border: 0.12rem solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1.37rem;
+  gap: 0.4rem;
+  margin: auto;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 0.43rem;
+  padding: 0.7rem 1rem;
+  font-size: 1.28rem;
+  background-color: #ea1414;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.1s ease-in-out;
+}
+#btn:hover {
+  scale: 1.1;
+}
+.releaseDate {
   border-radius: 0.25rem;
   box-shadow: 0rem 0rem 0.12rem 0rem;
-  background-color: #222226;
-  transition: 2s;
+  background-color: #00000026;
+  padding: 0rem 1rem;
+  font-family: sans-serif;
 }
 
 .banner_fadeBottom {
   background: linear-gradient(
-    180deg,
+    182deg,
     transparent,
     rgb(255 0 0 / 0%),
-    #00000021
+    #00000008
   );
   position: absolute;
   left: 0;
+  top: 0;
+  bottom: 0;
   width: 100%;
-  height: 33rem;
+  height: 100%;
   transition: 0.2s;
 }
 
@@ -150,20 +142,18 @@ body::-webkit-scrollbar {
   text-decoration: none;
 }
 .react-slideshow-container .default-nav:first-of-type {
-   background-color: #F61211;
-   left: 7ren;
+  background-color: #f61211;
+  left: 7ren;
 }
 
-
 .react-slideshow-container .default-nav:last-of-type {
-    background-color: #F61211;
-    
+  background-color: #f61211;
 }
 .react-slideshow-container .nav:first-of-type {
-   left: 7rem!important;
+  left: 7rem !important;
 }
 .react-slideshow-container .default-nav:last-of-type {
-    right: 7rem!important;
+  right: 7rem !important;
 }
 
 .visible {
