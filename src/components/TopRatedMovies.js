@@ -55,7 +55,7 @@ export default function TopRatedMovies() {
                           className="fa-sharp fa-solid fa-star"
                           style={{ color: "#e4ff1a" }}
                         ></i>
-                        {(vote_average || vote_count).toFixed(1)}
+                        {parseInt(vote_average || vote_count).toFixed(1)}
                       </div>
                       <span className=" card_releaseDate">
                         {parseInt(release_date || first_air_date)}

@@ -4,14 +4,14 @@ import "../components/CSS/MediaQueries/HomeMedia.css";
 import "../components/CSS/MediaQueries/MediaNavbar.css";
 
 import { Slide } from "react-slideshow-image";
-import 'react-slideshow-image/dist/styles.css'
+import "react-slideshow-image/dist/styles.css";
 
 import HomeApi, { HomeContext } from "../Api/HomeApi";
 import { FaRegCirclePlay } from "react-icons/fa6";
 
 export default function MovieBanner() {
   const { backdropURL, heroBanners, isLoading } = useContext(HomeContext);
- 
+
   return (
     <div id="backdrop">
       <Slide duration={30000} transitionDuration={500}>
@@ -45,7 +45,7 @@ export default function MovieBanner() {
                 <Link className="Link" to={`/moviedetail/${slideImage.id}`}>
                   <div className="buttonSection">
                     <button id="btn">
-                      <FaRegCirclePlay  id="buttonPlay" />
+                      <FaRegCirclePlay id="buttonPlay" />
                       Watch Now
                     </button>
                   </div>
