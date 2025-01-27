@@ -1,7 +1,8 @@
 .image-gallery-slide .image-gallery-image {
   object-fit: cover !important;
   max-height: unset !important;
-  height: 39rem !important;
+  height: 44rem !important;
+  filter: brightness(.5);
 }
 
 .image-gallery-thumbnails-container {
@@ -15,7 +16,6 @@
   min-width: 150px; /* Adjust thumbnail width */
   height: 170px; /* Adjust thumbnail width */
   object-fit: cover; /* Make sure images fit properly */
-  box-shadow: 0rem -1rem 7rem 3px rgb(31, 1, 1);
 }
 .image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus {
@@ -30,4 +30,23 @@
   top: 0px;
   left: 0px;
   right: 0px;
+  white-space: normal;
+  line-height: normal;
+  width: 80%;
+  margin: auto;
+}
+.slide-content a{
+  text-decoration: none;
+}
+.slide-title{
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+.slide-desc{
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+#btn{
+  margin-top: 3rem;
+  color: white;
 }
