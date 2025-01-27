@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import "../components/CSS/MoviesItems.css";
-import "../components/CSS/MediaQueries/HomeMedia.css";
+import "./CSS/MoviesItems.css";
+import './CSS/MediaQueries/HomeMedia.css'
 import placeholder from "../Photos/movie_placeholder.png";
 import { Link } from "react-router-dom";
 import { HomeContext } from "../Api/HomeApi";
@@ -23,7 +23,7 @@ export default function TrendingMovies() {
       <div id="MoviesItems">
         <Slider {...settings}>
           {trendingMoviesData.map(
-            ({ original_name,title, poster_path,first_air_date, vote_average, release_date, id }) => (
+            ({ original_name, title, poster_path, first_air_date, vote_average, release_date, id }) => (
               <div id="cards" key={vote_average}>
                 <>
                   <Link to={`/moviedetail/${id}`}>
@@ -33,7 +33,7 @@ export default function TrendingMovies() {
                       id="movie_image"
                     />
                   </Link>
-                  <h4>{String(original_name || title).slice(0, 19)}{String(original_name || title).length > 19?'...':""}</h4>
+                  <h4>{String(original_name || title).slice(0, 19)}{String(original_name || title).length > 19 ? '...' : ""}</h4>
                   <div id="movie_date_rating">
                     <div id="movie_rating">
                       <i

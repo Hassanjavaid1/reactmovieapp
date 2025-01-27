@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter} from 'react-router-dom';
-import  HomeContext  from './Api/HomeApi';
+import { BrowserRouter } from 'react-router-dom';
+import HomeContext from './Api/HomeApi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename='reactmovieapp'>
-    <HomeContext>
-    <App />
-    </HomeContext>
+    <BrowserRouter basename='iFlix'>
+      <HomeContext>
+        <App />
+      </HomeContext>
     </BrowserRouter>
   </React.StrictMode>
 );

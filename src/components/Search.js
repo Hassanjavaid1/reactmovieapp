@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import movie_placeholder from "../Photos/movie_placeholder.png";
 import { Api_Key, fetchData, img_url } from "../App";
 import { Link, useLocation } from "react-router-dom";
-import "../components/CSS/Search.css";
+import "../Component/CSS/Search.css";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./CSS/Loader.css";
-import "../components/CSS/SearchMedia.css";
-import "../components/CSS/SideMedia.css";
-import "../components/CSS/Navbar.css";
-import "../components/CSS/MediaNavbar.css";
+import "../Component/CSS/SearchMedia.css";
+import "../Component/CSS/SideMedia.css";
+import "../Component/CSS/Navbar.css";
+import "../Component/CSS/MediaNavbar.css";
 import InfiniteScrollbar from "./InfiniteScrollbar";
 
 import { useNavigate } from "react-router-dom";

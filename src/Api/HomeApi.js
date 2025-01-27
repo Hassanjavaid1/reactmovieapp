@@ -39,6 +39,7 @@ export default function HomeApi({ children }) {
       const topRatedSeries = await topRatedSeriesResponse.json();
 
       setHeroBanners(heroMovies.results);
+      console.log(heroMovies)
       setTrendingMoviesData(trendingMovies.results);
       setTrendingSeriesData(trendingSeries.results);
       setTopRatedMoviesData(topRatedMovies.results);

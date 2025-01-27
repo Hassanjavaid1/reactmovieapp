@@ -3,7 +3,7 @@ import { fetchData, Api_Key } from "../App";
 import "./CSS/FilterIcons.css";
 import "./CSS/FilterMovieCard.css";
 import InfiniteScroll from "react-infinite-scroll-component";
-import InfiniteScrollbar from "../components/InfiniteScrollbar";
+import InfiniteScrollbar from "../Component/InfiniteScrollbar";
 
 import { MdOutlineSportsKabaddi } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";

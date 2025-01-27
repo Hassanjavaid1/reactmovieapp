@@ -1,0 +1,33 @@
+.image-gallery-slide .image-gallery-image {
+  object-fit: cover !important;
+  max-height: unset !important;
+  height: 39rem !important;
+}
+
+.image-gallery-thumbnails-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+.image-gallery-thumbnail img {
+  min-width: 150px; /* Adjust thumbnail width */
+  height: 170px; /* Adjust thumbnail width */
+  object-fit: cover; /* Make sure images fit properly */
+  box-shadow: 0rem -1rem 7rem 3px rgb(31, 1, 1);
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 3px solid #ff1313 !important;
+}
+.image-gallery-thumbnail:hover {
+  border: 3px solid #ff1919 !important;
+}
+
+.slide-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}

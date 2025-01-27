@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import "../components/CSS/MoviesItems.css";
-import "../components/CSS/MediaQueries/HomeMedia.css";
+import "./CSS/MoviesItems.css";
+import "./CSS/MediaQueries/HomeMedia.css";
 import placeholder from "../Photos/movie_placeholder.png";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";

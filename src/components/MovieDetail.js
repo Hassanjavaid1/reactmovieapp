@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import "../components/CSS/MovieDetail.css";
-import "../components/CSS/MoviesItems.css";
-import RecoMovie from "../components/RecoMovie";
-import "../components/CSS/SideMedia.css";
-import "../components/CSS/Navbar.css";
+import "./CSS/MovieDetail.css";
+import "./CSS/MoviesItems.css";
+import RecoMovie from './RecoMovie'
+
+import "./CSS/SideMedia.css";
+import "./CSS/Navbar.css";
 import { useParams } from "react-router-dom";
 import Slider from "react-slick";
 import { HomeContext } from "../Api/HomeApi";

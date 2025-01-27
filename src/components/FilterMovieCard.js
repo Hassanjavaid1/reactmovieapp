@@ -2,8 +2,8 @@ import React from "react";
 import { img_url } from "../App";
 import { Link } from "react-router-dom";
 import placeholder from "../Photos/movie_placeholder.png";
-import { useMovieContext } from "../components/MovieContext";
-import "../components/CSS/MediaFilterCard.css";
+import { useMovieContext } from "../Component/MovieContext";
+import "../Component/CSS/MediaFilterCard.css";
 
 export default function FilterMovieCard({ genreName }) {
   const { filterMovie, infiniteScroll, MoviegenreName } = useMovieContext();
